@@ -1,0 +1,8 @@
+package at.chainlet.rse.core.exceptions;
+
+/**
+ * This class represents every
+ */
+public class RSEInvalidStateException extends Exception {
+
+}

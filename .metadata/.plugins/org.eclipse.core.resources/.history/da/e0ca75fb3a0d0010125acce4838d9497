@@ -1,0 +1,22 @@
+package at.chainlet.rse.core;
+
+import junit.framework.Assert;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ * Contains the tests of the Dictionary class.
+ */
+public class Dictionary_Tests {	
+	@Test(expected=IllegalArgumentException.class)
+	public void addNullWordShouldThrowIllegalArgumentException() {
+		Dictionary dic = new Dictionary();
+		dic.add(null);
+	}
+	
+	public void addNamelesWordShouldThrowRSEInvalidStateException() {
+		Dictionary dic = new Dictionary();
+		dic.add((new MockWords()).setName(""));
+	}
+}

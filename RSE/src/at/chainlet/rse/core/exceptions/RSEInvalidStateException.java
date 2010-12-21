@@ -1,0 +1,13 @@
+package at.chainlet.rse.core.exceptions;
+
+/**
+ * This class represents every error which appears because of not allowed states of
+ * objects which are used in the RSE VM.
+ */
+public class RSEInvalidStateException extends Exception { 
+	private static final long serialVersionUID = 1L; 
+
+	public RSEInvalidStateException() { super(); }
+	
+	public RSEInvalidStateException(String msg) { super(msg); }
+}

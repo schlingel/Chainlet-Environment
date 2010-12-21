@@ -1,0 +1,10 @@
+package at.chainlet.rse.core.exceptions;
+
+/**
+ * This class represents every error which appears because of not allowed actions. An action
+ * needs definied conditions and otherwhise this action is throwen. For example: The dup word
+ * needs a not empty stack.
+ */
+public class RSEInvalidActionException extends Exception {
+
+}

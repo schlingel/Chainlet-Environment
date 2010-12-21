@@ -1,0 +1,10 @@
+package at.chainlet.rse.core;
+
+/**
+ * Manages the dictionaries and the order in which they get interpreted.
+ */
+public class Library {
+	class LibraryEntry<T> {
+		public T getValue();
+	}
+}

@@ -1,0 +1,6 @@
+/**
+ * Basic interface for an executable word.
+ */
+public class Word {
+	
+}

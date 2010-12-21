@@ -1,0 +1,53 @@
+package at.chainlet.rse.core;
+
+import junit.framework.Assert;
+
+import org.junit.Test;
+
+import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
+import static org.junit.Assert.*;
+
+/**
+ * Contains the tests of the Dictionary class.
+ */
+public class Dictionary_Tests {	
+	@Test(expected = IllegalArgumentException.class)
+	public void addNullWordShouldThrowIllegalArgumentException() throws RSEInvalidStateException {
+		Dictionary dic = new Dictionary();
+		dic.add(null);
+	}
+	
+	@Test(expected = RSEInvalidStateException.class)
+	public void addNamelesWordShouldThrowRSEInvalidStateException() throws RSEInvalidStateException {
+		Dictionary dic = new Dictionary();
+		dic.add(new MockWord(""));
+	}
+	
+	@Test
+	public void containsShouldReturnTrueIfWordExists() {
+		Dictionary dic = new Dictionary();
+		Word w = new MockWord("testibert");
+		try {
+			dic.add(w);
+			assertTrue(dic.contains(w));
+		}
+		catch(Exception e) { assertEquals(e.getMessage(), null, e); }
+	}
+	
+	@Test 
+	public void containsShouldReturnFalseIfWordDoesntExist() {
+		Dictionary dic = new Dictionary();
+		assertFalse(dic.contains("Not there!"));
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void containsShouldThrowIllegalArgumentException() throws RSEInvalidStateException {
+		Dictionary dic = new Dictionary();
+		Word w = null;
+		dic.contains(w);
+	}
+	
+	public void containsShouldThrowRSEInvalidStateExceptionOnEmptyName() throws RSEInvalidStateException {
+		
+	}
+}

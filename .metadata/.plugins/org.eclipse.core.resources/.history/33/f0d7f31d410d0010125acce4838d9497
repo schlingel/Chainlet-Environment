@@ -1,0 +1,21 @@
+package at.chainlet.rse.core;
+
+import org.junit.Test;
+
+import at.chainlet.rse.core.exceptions.RSEInvalidActionException;
+
+public class Library_Tests {
+	private static int dictCount = 0;
+	
+	private synchronized Dictionary getEmptyMockDict() { 
+		return new Dictionary("Dictionary " + dictCount);
+	}
+	
+	@Test(expected = RSEInvalidActionException.class)
+	public void prioritizeShouldThrowRSEInvalidStateException() throws RSEInvalidActionException {
+		Library lib = new Library();
+		lib.add(getEmptyMockDict());
+		lib.add(getEmptyMockDict());
+		lib.prioritize("Not there!");
+	}
+}

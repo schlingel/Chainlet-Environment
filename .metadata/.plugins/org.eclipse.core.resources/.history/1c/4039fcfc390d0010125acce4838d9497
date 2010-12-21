@@ -1,0 +1,5 @@
+package at.chainlet.rse.core;
+
+public class MockWords implements Word {
+	
+}

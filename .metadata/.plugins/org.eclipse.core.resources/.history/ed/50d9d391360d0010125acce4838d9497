@@ -1,0 +1,19 @@
+package at.chainlet.rse.core;
+
+import java.util.*;
+
+/**
+ * This is the core of the RSE system. It contains the logic for managing and starting
+ * words and contains the shared stacks.
+ */
+public class RudimentaryStackVM {
+	private Stack<Object> returnStack;
+	
+	private
+	
+	/**
+	 * Initializes the VM.
+	 */
+	public RudimentaryStackVM() {
+	}
+}

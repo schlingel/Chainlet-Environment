@@ -1,0 +1,5 @@
+package at.chainlet.rse.core.exceptions;
+
+public class RSEInvalidStateException extends Exception {
+
+}

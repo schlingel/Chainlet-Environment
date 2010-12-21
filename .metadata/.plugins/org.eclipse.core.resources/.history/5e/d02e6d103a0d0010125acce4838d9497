@@ -1,0 +1,9 @@
+package at.chainlet.rse.core;
+
+public class MockWord implements Word {
+	private String name;
+	
+	public MockWord(String _name) {
+		name = _name;
+	}
+}

@@ -1,0 +1,13 @@
+package at.chainlet.rse.core;
+
+import org.junit.Test;
+
+/**
+ * Contains the tests of the Dictionary class.
+ */
+public class Dictionary_Tests {	
+	@Test
+	public void addNullWordShouldThrowIllegalArgumentException() {
+		
+	}
+}

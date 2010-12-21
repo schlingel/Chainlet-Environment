@@ -1,0 +1,8 @@
+package at.chainlet.rse.core;
+
+/**
+ * Manages the dictionaries in the 
+ */
+public class Library {
+
+}

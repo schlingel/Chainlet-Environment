@@ -1,0 +1,28 @@
+package at.chainlet.rse.core;
+
+import java.util.HashMap;
+
+/**
+ * Representation of a dictionary. A dictionary is a named word list.
+ */
+public class Dictionary {
+	/**
+	 * Contains the name of the dictionary.
+	 */
+	private String name;
+	
+	/**
+	 * Contains the words.
+	 */
+	private HashMap<String, Word> words;
+	
+	/**
+	 * Initializes the dictionary.
+	 */
+	public Dictionary(String _name, HashMap<String, Word> _words) {
+		words = _words
+		name = _name;
+	}
+	
+	public Dictionary() { this("", ); }
+}

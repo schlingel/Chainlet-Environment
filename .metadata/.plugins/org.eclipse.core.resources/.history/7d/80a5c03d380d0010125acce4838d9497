@@ -1,0 +1,27 @@
+package at.chainlet.rse.core;
+
+import java.util.HashMap;
+
+/**
+ * 
+ * @author zombie
+ *
+ */
+public class Dictionary {
+	/**
+	 * Contains the name of the dictionary.
+	 */
+	private String name;
+	
+	/**
+	 * Contains the words.
+	 */
+	private HashMap<String, Word> words;
+	
+	public Dictionary(String _name) {
+		words = new HashMap<String, Word>();
+		name = _name;
+	}
+	
+	public Dictionary() { this(""); }
+}

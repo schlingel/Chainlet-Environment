@@ -1,0 +1,10 @@
+package at.chainlet.rse.core;
+
+public class Dictionary {
+	/**
+	 * Contains the name of the string
+	 */
+	private String name;
+	
+	private HashMap<String, Word> 
+}

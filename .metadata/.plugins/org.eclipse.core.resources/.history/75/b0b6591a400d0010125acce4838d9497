@@ -1,0 +1,10 @@
+package at.chainlet.rse.core.exceptions;
+
+/**
+ * 
+ * @author zombie
+ *
+ */
+public class RSEInvalidActionException extends Exception {
+
+}

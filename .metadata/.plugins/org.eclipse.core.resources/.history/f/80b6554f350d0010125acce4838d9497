@@ -1,0 +1,9 @@
+/**
+ * Basic interface for an executable word.
+ */
+public class Word {
+	/**
+	 * This method runs the word.
+	 */
+	public void execute();
+}

@@ -1,0 +1,51 @@
+package at.chainlet.rse.core;
+
+import java.util.HashMap;
+
+import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
+
+/**
+ * Representation of a dictionary. A dictionary is a named word list.
+ */
+public class Dictionary {
+	/**
+	 * Contains the name of the dictionary.
+	 */
+	private String name;
+	
+	/**
+	 * Contains the words.
+	 */
+	private HashMap<String, Word> words;
+	
+	/**
+	 * Initializes the dictionary.
+	 */
+	public Dictionary(String _name, HashMap<String, Word> _words) {
+		words = _words;
+		name = _name;
+	}
+	
+	public Dictionary() { this("", new HashMap<String, Word>()); }
+	
+	/**
+	 * Adds the given word to the words list.
+	 */
+	public void add(Word word) throws RSEInvalidStateException {
+		if(word == null) 
+			throw new IllegalArgumentException("A word definition must not be null!");
+		
+		if(word.getName() == "")
+			throw new RSEInvalidStateException("Every word must have a set name!");
+		
+		words.put(word.getName(), word);
+	}
+	
+	public boolean contains(Word word) {
+		
+	}
+	
+	public boolean contains(String name) {
+		
+	}
+}

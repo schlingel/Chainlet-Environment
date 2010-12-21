@@ -1,0 +1,9 @@
+package at.chainlet.rse.core;
+
+/**
+ * This is the core of the RSE system. It contains the logic for starting words
+ * and parsing 
+ */
+public class RudimentaryStackVM {
+
+}
