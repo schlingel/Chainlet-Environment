@@ -1,0 +1,15 @@
+package at.chainlet.rse.core;
+
+public abstract class RSECoreTest {
+	private static int dictCount = 0;
+	
+	protected synchronized Dictionary getEmptyMockDict() { 
+		return new Dictionary("Dictionary " + dictCount);
+	}	
+	
+	protected Word getMockWord(String name) { return new MockWord(name); }
+	
+	protected Dictionary getMockDict(String name) { return new Dictionary(name); }
+	
+	protected Library getMockLibrary() { return new Library(); }
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="at.chainlet.rse.core" project="RSE" tests="16" started="16" failures="0" errors="2" ignored="0">
+  <testsuite name="at.chainlet.rse.core.Library_Tests" time="0.01">
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInNotEmptyDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0">
+      <error>java.lang.IllegalArgumentException: The index to (0) or from (-1) are not inbetween the dictionaries size (0 - (3))
+	at at.chainlet.rse.core.Library.swapDictionaries(Library.java:83)
+	at at.chainlet.rse.core.Library.prioritize(Library.java:60)
+	at at.chainlet.rse.core.Library_Tests.prioritizeShouldCreateDictOnNotExistingNamesInNotEmptyDict(Library_Tests.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInEmptyDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0">
+      <error>java.lang.IllegalArgumentException: The index to (0) or from (-1) are not inbetween the dictionaries size (0 - (1))
+	at at.chainlet.rse.core.Library.swapDictionaries(Library.java:83)
+	at at.chainlet.rse.core.Library.prioritize(Library.java:60)
+	at at.chainlet.rse.core.Library_Tests.prioritizeShouldCreateDictOnNotExistingNamesInEmptyDict(Library_Tests.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+    <testcase name="addShouldTrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnEmptyName" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="getWorkingDictionaryShouldReturnNullInEmptyLibrary" classname="at.chainlet.rse.core.Library_Tests" time="0.01"/>
+    <testcase name="getWorkingDictionaryShouldReturnLatestDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+  </testsuite>
+  <testsuite name="at.chainlet.rse.core.Dictionary_Tests" time="0.0">
+    <testcase name="addNullWordShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="addNamelesWordShouldThrowRSEInvalidStateException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldReturnTrueIfWordExists" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist1" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist2" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldThrowRSEInvalidStateExceptionOnEmptyName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="getShouldReturnNullOnUnknownName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="getShouldReturnTheWordWithTheGivenName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+  </testsuite>
+</testrun>

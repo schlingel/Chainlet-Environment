@@ -1,0 +1,50 @@
+package at.chainlet.rse.core;
+
+import org.junit.Test;
+import at.chainlet.rse.core.exceptions.RSEInvalidActionException;
+import static org.junit.Assert.*;
+
+public class Library_Tests {
+	private static int dictCount = 0;
+	
+	private synchronized Dictionary getEmptyMockDict() { 
+		return new Dictionary("Dictionary " + dictCount);
+	}
+	
+	@Test(expected = RSEInvalidActionException.class)
+	public void prioritizeShouldThrowRSEInvalidStateExceptionOnNotExistingNames() throws RSEInvalidActionException {
+		Library lib = new Library();
+		lib.add(getEmptyMockDict());
+		lib.add(getEmptyMockDict());
+		lib.prioritize("Not there!");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void addShouldTrowIllegalArgumentExceptionOnNullValue() {
+		Library lib = new Library();
+		lib.add(null);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void createDictionaryShouldThrowIllegalArgumentExceptionOnEmptyName() {
+		Library lib = new Library();
+		lib.createDictionary("");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void createDictionaryShouldThrowIllegalArgumentExceptionOnNullValue() {
+		Library lib = new Library();
+		lib.createDictionary(null);
+	}	
+	
+	@Test
+	public void getWorkingDictionaryShouldReturnNullInEmptyLibrary() {
+		Library lib = new Library();
+		assertNull(lib.getWorkingDictionary());
+	}
+	
+	@Test
+	public void getWorkingDictionaryShouldReturnLatestDict() {
+		
+	}
+}

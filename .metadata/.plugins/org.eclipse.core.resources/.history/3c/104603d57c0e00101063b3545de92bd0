@@ -1,0 +1,57 @@
+package at.chainlet.rse.core;
+
+import java.util.LinkedList;
+
+/**
+ * Manages the dictionaries and the order in which they get interpreted.
+ */
+public class Library {
+	private LinkedList<Dictionary> dictionaries;
+	
+	public Library() {
+		dictionaries = new LinkedList<Dictionary>();
+	}
+	
+	// The working dictionary is the dictionary which is first used to search for 
+	// words and furthermore it is used to store new word definitions. 
+	/**
+	 * Returns the current working dictionary or if the dictionaries list is empty null.
+	 */
+	public Dictionary getWorkingDictionary() { 
+		if(dictionaries.isEmpty())
+			return null;
+		
+		return dictionaries.get(0);
+	}
+	
+	/**
+	 * Adds the given dictionary to the dictionary list in the library.
+	 */
+	public void add(Dictionary dic) {
+		if(dic == null)
+			throw new IllegalArgumentException("The dictionary must not be null!");
+		
+		dictionaries.add(dic);
+	}
+	
+	/**
+	 * Creates an dictionary with the given name and put it to the start of the 
+	 * dictionaries.
+	 * @param name
+	 */
+	public void createDictionary(String name) {
+		if(name == null || name == "")
+			throw new IllegalArgumentException("A dictionary must hava a non empty name!");
+		
+		dictionaries.add(new Dictionary(name));
+	}
+	
+	/**
+	 * Puts the dictionary with the given name as first element in the dictionaries list which makes
+	 * it the working dictionary. If no dictionary with the given name exists the method return false
+	 * and does nothing, otherwise true it prioritize the dictionary.
+	 */
+	public boolean prioritize(String name) {
+		return false;
+	}
+}

@@ -1,0 +1,5 @@
+package at.chainlet.rse.core;
+
+public abstract class RSECoreTest {
+	protected Word 
+}

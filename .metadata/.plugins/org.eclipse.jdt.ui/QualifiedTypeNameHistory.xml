@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.concurrent.ConcurrentLinkedQueue"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.MockWord"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidStateException"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidActionException"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.Library"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.Dictionary"/>
+</qualifiedTypeNameHistroy>

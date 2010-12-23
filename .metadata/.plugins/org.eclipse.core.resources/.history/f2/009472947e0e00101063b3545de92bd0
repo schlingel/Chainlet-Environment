@@ -1,0 +1,9 @@
+package at.chainlet.rse.core;
+
+public abstract class RSECoreTest {
+	protected Word getMockWord(String name) { return new MockWord(name); }
+	
+	protected Dictionary getMockDictionary(String name) { return new Dictionary(name); }
+	
+	protected Library getMockLibrary() { return new Library; }
+}

@@ -8,23 +8,23 @@ import static org.junit.Assert.*;
 /**
  * Contains the tests of the Dictionary class.
  */
-public class Dictionary_Tests {	
+public class Dictionary_Tests extends RSECoreTest {	
 	@Test(expected = IllegalArgumentException.class)
 	public void addNullWordShouldThrowIllegalArgumentException() throws RSEInvalidStateException {
-		Dictionary dic = new Dictionary();
+		Dictionary dic = getMockDict("Test");
 		dic.add(null);
 	}
 	
 	@Test(expected = RSEInvalidStateException.class)
 	public void addNamelesWordShouldThrowRSEInvalidStateException() throws RSEInvalidStateException {
-		Dictionary dic = new Dictionary();
+		Dictionary dic = getMockDict("Test");
 		dic.add(new MockWord(""));
 	}
 	
 	@Test
 	public void containsShouldReturnTrueIfWordExists() {
-		Dictionary dic = new Dictionary();
-		Word w = new MockWord("testibert");
+		Dictionary dic = getMockDict("Test");
+		Word w = getMockWord("testibert");
 		try {
 			dic.add(w);
 			assertTrue(dic.contains(w));
@@ -34,41 +34,41 @@ public class Dictionary_Tests {
 	
 	@Test 
 	public void containsShouldReturnFalseIfWordDoesntExist1() {
-		Dictionary dic = new Dictionary();
+		Dictionary dic = getMockDict("Empty Dict");
 		assertFalse(dic.contains("Not there!"));
 	}
 
 	@Test 
 	public void containsShouldReturnFalseIfWordDoesntExist2() throws RSEInvalidStateException {
-		Dictionary dic = new Dictionary();
-		Word w = new MockWord("Not there!");
+		Dictionary dic = getMockDict("Empty Dict");
+		Word w = getMockWord("Not there!");
 		assertFalse(dic.contains(w));
 	}	
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void containsShouldThrowIllegalArgumentException() throws RSEInvalidStateException {
-		Dictionary dic = new Dictionary();
+		Dictionary dic = getMockDict("Empty Dict");
 		Word w = null;
 		dic.contains(w);
 	}
 	
 	@Test(expected = RSEInvalidStateException.class)
 	public void containsShouldThrowRSEInvalidStateExceptionOnEmptyName() throws RSEInvalidStateException {
-		Dictionary dic = new Dictionary();
-		Word w = new MockWord("");
+		Dictionary dic = getMockDict("Empty");
+		Word w = getMockWord("");
 		dic.contains(w);
 	}
 	
 	@Test
 	public void getShouldReturnNullOnUnknownName() {
-		Dictionary dic = new Dictionary();
+		Dictionary dic = getMockDict("Empty Dict");
 		assertNull(dic.get("Not there!"));
 	}
 	
 	@Test
 	public void getShouldReturnTheWordWithTheGivenName() throws RSEInvalidStateException {
-		Dictionary dic = new Dictionary();
-		Word w = new MockWord("test");
+		Dictionary dic = getMockDict("Dict");
+		Word w = getMockWord("testibert");
 		dic.add(w);
 		assertEquals(w, dic.get(w.getName()));
 	}

@@ -1,21 +1,82 @@
 package at.chainlet.rse.core;
 
 import org.junit.Test;
-
 import at.chainlet.rse.core.exceptions.RSEInvalidActionException;
+import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
+import static org.junit.Assert.*;
 
-public class Library_Tests {
-	private static int dictCount = 0;
-	
-	private synchronized Dictionary getEmptyMockDict() { 
-		return new Dictionary("Dictionary " + dictCount);
-	}
-	
-	@Test(expected = RSEInvalidActionException.class)
-	public void prioritizeShouldThrowRSEInvalidStateExceptionOnNotExistingNames() throws RSEInvalidActionException {
+public class Library_Tests extends RSECoreTest {	
+	@Test
+	public void prioritizeShouldCreateDictOnNotExistingNamesInNotEmptyDict() throws RSEInvalidActionException {
 		Library lib = new Library();
 		lib.add(getEmptyMockDict());
 		lib.add(getEmptyMockDict());
-		lib.prioritize("Not there!");
+		lib.prioritize("Testibert");
+		Dictionary wd = lib.getWorkingDictionary();
+		
+		assertNotNull(wd);
+		assertEquals("Testibert", wd.getName());
 	}
+
+	@Test
+	public void prioritizeShouldCreateDictOnNotExistingNamesInEmptyDict() throws RSEInvalidActionException {
+		Library lib = getMockLibrary();
+		lib.prioritize("Testibert");
+		Dictionary wd = lib.getWorkingDictionary();
+		
+		assertNotNull(wd);
+		assertEquals("Testibert", wd.getName());
+	}	
+	
+	@Test
+	public void prioritizeShouldPrioritizeExistingDict() {
+		Library lib = getMockLibrary();
+		Dictionary d3 = getMockDict("3");
+		lib.add(getMockDict("1"));
+		lib.add(getMockDict("2"));
+		lib.add(d3);
+		
+		assertEquals(d3, lib.getWorkingDictionary());
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void addShouldTrowIllegalArgumentExceptionOnNullValue() {
+		Library lib = new Library();
+		lib.add(null);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void createDictionaryShouldThrowIllegalArgumentExceptionOnEmptyName() {
+		Library lib = new Library();
+		lib.createDictionary("");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void createDictionaryShouldThrowIllegalArgumentExceptionOnNullValue() {
+		Library lib = new Library();
+		lib.createDictionary(null);
+	}	
+	
+	@Test
+	public void getWorkingDictionaryShouldReturnNullInEmptyLibrary() {
+		Library lib = new Library();
+		assertNull(lib.getWorkingDictionary());
+	}
+	
+	@Test
+	public void getWorkingDictionaryShouldReturnLatestDict() throws RSEInvalidStateException {
+		Library lib = getMockLibrary();
+		Dictionary d1 = getMockDict("d1");
+		Dictionary d2 = getMockDict("d2");
+		d1.add(getMockWord("w1"));
+		d1.add(getMockWord("w2"));
+		d2.add(getMockWord("w3"));
+		d2.add(getMockWord("w4"));
+		
+		lib.add(d2);
+		lib.add(d1);
+		assertEquals(d1, lib.getWorkingDictionary());
+	}
+	
+	
 }

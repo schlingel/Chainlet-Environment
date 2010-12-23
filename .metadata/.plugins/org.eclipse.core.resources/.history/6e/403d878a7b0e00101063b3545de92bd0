@@ -1,0 +1,32 @@
+package at.chainlet.rse.core;
+
+import java.util.LinkedList;
+
+/**
+ * Manages the dictionaries and the order in which they get interpreted.
+ */
+public class Library {
+	private LinkedList<Dictionary> dictionaries;
+	
+	public Library() {
+		dictionaries = new LinkedList<Dictionary>();
+	}
+	
+	/**
+	 * Adds the given dictionary to the dictionary list in the library.
+	 */
+	public void add(Dictionary dic) {
+		if(dic == null)
+			throw new IllegalArgumentException("The dictionary must not be null!");
+		
+		dictionaries.add(dic);
+	}
+	
+	/**
+	 * Creates an dictionary with the given name.
+	 * @param name
+	 */
+	public void createDictionary(String name) {
+		
+	}
+}

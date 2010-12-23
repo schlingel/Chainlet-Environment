@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="RSE" project="RSE" tests="17" started="17" failures="0" errors="0" ignored="0">
+  <testsuite name="at.chainlet.rse.core.Library_Tests" time="0.002">
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInNotEmptyDict" classname="at.chainlet.rse.core.Library_Tests" time="0.001"/>
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInEmptyDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="prioritizeShouldPrioritizeExistingDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="addShouldTrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnEmptyName" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="getWorkingDictionaryShouldReturnNullInEmptyLibrary" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="getWorkingDictionaryShouldReturnLatestDict" classname="at.chainlet.rse.core.Library_Tests" time="0.001"/>
+  </testsuite>
+  <testsuite name="at.chainlet.rse.core.Dictionary_Tests" time="0.002">
+    <testcase name="addNullWordShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="addNamelesWordShouldThrowRSEInvalidStateException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldReturnTrueIfWordExists" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.001"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist1" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist2" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldThrowRSEInvalidStateExceptionOnEmptyName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.001"/>
+    <testcase name="getShouldReturnNullOnUnknownName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="getShouldReturnTheWordWithTheGivenName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+  </testsuite>
+</testrun>
