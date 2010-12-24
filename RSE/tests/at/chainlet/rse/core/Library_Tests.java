@@ -78,5 +78,80 @@ public class Library_Tests extends RSECoreTest {
 		assertEquals(d1, lib.getWorkingDictionary());
 	}
 	
+	@Test
+	public void wordExistsShouldReturnFalseOnNotExistingWord() {
+		Library lib = getMockLibrary();
+		assertFalse(lib.wordExists("Not existing!"));
+	}
 	
+	@Test
+	public void wordExistsShouldReturnTrueOnExistingWordAndOnlyTheNameAsParameter() throws RSEInvalidStateException {
+		Library lib = getMockLibrary();
+		Dictionary dict1 = getMockDict("dict1");
+		Dictionary dict2 = getMockDict("dict2");
+		lib.add(dict1);
+		lib.add(dict2);
+		
+		for(Integer i = 0; i < 1000; i++) {
+			if(i % 2 == 0) {
+				dict1.add(getMockWord("word" + i));
+			}
+			else {  
+				dict2.add(getMockWord("word" + i));
+			}
+		}
+		
+		assertTrue(lib.wordExists("word54"));
+	}
+	
+	@Test
+	public void wordExistsShouldReturnTrueOnExistingWordWithNamespaceAndNameAsParameter() throws RSEInvalidStateException {
+		Library lib = getMockLibrary();
+		Dictionary dict1 = getMockDict("dict1");
+		Dictionary dict2 = getMockDict("dict2");
+		lib.add(dict1);
+		lib.add(dict2);
+		
+		for(Integer i = 0; i < 1000; i++) {
+			if(i % 2 == 0) {
+				dict1.add(getMockWord("word" + i));
+			}
+			else {  
+				dict2.add(getMockWord("word" + i));
+			}
+		}
+		
+		assertTrue(lib.wordExists("dict1.word54"));
+	}
+	
+	@Test
+	public void getWordShouldReturnLatestWordWithName() throws RSEInvalidStateException {
+		Library lib = getMockLibrary();
+		Dictionary dic = getMockDict("dic");
+		Word w1 = getMockWord("w1");
+		
+		for(int i = 0; i < 1000; i++) {
+			dic.add(getMockWord("w1"));
+		}
+		dic.add(w1);
+		
+		assertEquals(w1, lib.getWord("w1"));
+	}
+	
+	@Test
+	public void getWordShouldReturnWordFromTheChoosenDictionary() throws RSEInvalidActionException, RSEInvalidStateException {
+		Library lib = getMockLibrary();
+		Dictionary dic = getMockDict("choosen");
+		Word w = getMockWord("word");
+		dic.add(w);
+		lib.add(dic);
+		
+		for(int i = 0; i < 1000; i++) {
+			Dictionary tmp = getMockDict("dict" + i);
+			tmp.add(getMockWord("word"));
+			lib.add(tmp);
+		}
+		
+		assertEquals(w, lib.getWord("choosen.word"));
+	}
 }
