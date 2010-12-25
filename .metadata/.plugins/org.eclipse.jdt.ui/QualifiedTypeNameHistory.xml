@@ -7,10 +7,13 @@
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.MockWord"/>
-<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidStateException"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidActionException"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Library"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.RSECoreTest"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidActionException"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidStateException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Dictionary"/>
 </qualifiedTypeNameHistroy>

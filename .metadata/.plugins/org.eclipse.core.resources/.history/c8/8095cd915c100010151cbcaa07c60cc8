@@ -1,0 +1,21 @@
+package at.chainlet.rse.core;
+
+import java.util.ArrayList;
+
+
+/**
+ * The historized word list contains the functionality of a word array list 
+ * with additionally the option to store information which index should
+ * be returned per default.
+ */
+public class HistorizedWordList extends ArrayList<Word> {
+	private int curIndex;
+	
+	public HistorizedWordList() {
+		curIndex = 0;
+	}
+	
+	public hasOlderVersions() {
+		
+	}
+}

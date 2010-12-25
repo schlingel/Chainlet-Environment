@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="Library_Tests" project="RSE" tests="15" started="15" failures="3" errors="0" ignored="0">
+  <testsuite name="at.chainlet.rse.core.Library_Tests" time="4.524">
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInNotEmptyDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInEmptyDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="prioritizeShouldPrioritizeExistingDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="addShouldTrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnEmptyName" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="getWorkingDictionaryShouldReturnNullInEmptyLibrary" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="getWorkingDictionaryShouldReturnLatestDict" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="wordExistsShouldReturnFalseOnNotExistingWord" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="wordExistsShouldReturnTrueOnExistingWordAndOnlyTheNameAsParameter" classname="at.chainlet.rse.core.Library_Tests" time="0.0"/>
+    <testcase name="wordExistsShouldReturnTrueOnExistingWordWithNamespaceAndNameAsParameter" classname="at.chainlet.rse.core.Library_Tests" time="0.016">
+      <failure>java.lang.AssertionError: 
+	at org.junit.Assert.fail(Assert.java:91)
+	at org.junit.Assert.assertTrue(Assert.java:43)
+	at org.junit.Assert.assertTrue(Assert.java:54)
+	at at.chainlet.rse.core.Library_Tests.wordExistsShouldReturnTrueOnExistingWordWithNamespaceAndNameAsParameter(Library_Tests.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="getWordShouldReturnLatestWordWithName" classname="at.chainlet.rse.core.Library_Tests" time="0.0">
+      <failure>java.lang.AssertionError: expected:&lt;at.chainlet.rse.core.MockWord@182f0db&gt; but was:&lt;null&gt;
+	at org.junit.Assert.fail(Assert.java:91)
+	at org.junit.Assert.failNotEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:126)
+	at org.junit.Assert.assertEquals(Assert.java:145)
+	at at.chainlet.rse.core.Library_Tests.getWordShouldReturnLatestWordWithName(Library_Tests.java:138)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="getWordShouldReturnWordFromTheChoosenDictionary" classname="at.chainlet.rse.core.Library_Tests" time="0.015">
+      <failure>java.lang.AssertionError: expected:&lt;at.chainlet.rse.core.MockWord@192d342&gt; but was:&lt;null&gt;
+	at org.junit.Assert.fail(Assert.java:91)
+	at org.junit.Assert.failNotEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:126)
+	at org.junit.Assert.assertEquals(Assert.java:145)
+	at at.chainlet.rse.core.Library_Tests.getWordShouldReturnWordFromTheChoosenDictionary(Library_Tests.java:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="getWordShouldReturnNullForNotExistingName" classname="at.chainlet.rse.core.Library_Tests" time="2.808"/>
+    <testcase name="getWordShouldReturnNullForNotExistingNameInGivenNamespaceWordName" classname="at.chainlet.rse.core.Library_Tests" time="1.685"/>
+  </testsuite>
+</testrun>

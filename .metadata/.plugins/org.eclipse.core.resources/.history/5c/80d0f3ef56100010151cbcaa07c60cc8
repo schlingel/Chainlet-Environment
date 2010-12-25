@@ -1,0 +1,160 @@
+package at.chainlet.rse.core;
+
+import java.util.LinkedList;
+
+/**
+ * Manages the dictionaries and the order in which they get interpreted.
+ */
+public class Library {
+	private LinkedList<Dictionary> dictionaries;
+	
+	public Library() {
+		dictionaries = new LinkedList<Dictionary>();
+	}
+	
+	// The working dictionary is the dictionary which is first used to search for 
+	// words and furthermore it is used to store new word definitions. 
+	/**
+	 * Returns the current working dictionary or if the dictionaries list is empty null.
+	 */
+	public Dictionary getWorkingDictionary() { 
+		if(dictionaries.isEmpty())
+			return null;
+		
+		return dictionaries.get(0);
+	}
+	
+	/**
+	 * Adds the given dictionary to the dictionary list in the library.
+	 */
+	public void add(Dictionary dic) {
+		if(dic == null)
+			throw new IllegalArgumentException("The dictionary must not be null!");
+		
+		dictionaries.add(0, dic);
+	}
+	
+	/**
+	 * Creates an dictionary with the given name and put it to the start of the 
+	 * dictionaries.
+	 * @param name
+	 */
+	public void createDictionary(String name) {
+		if(name == null || name == "")
+			throw new IllegalArgumentException("A dictionary must hava a non empty name!");
+		
+		dictionaries.add(0, new Dictionary(name));
+	}
+	
+	/**
+	 * Puts the dictionary with the given name as first element in the dictionaries list which makes
+	 * it the working dictionary. If no dictionary with the given name exists the method return false
+	 * and does nothing, otherwise true it prioritize the dictionary.
+	 */
+	public void prioritize(String name) {
+		int index = indexOfDict(name);
+		if(index == -1) {
+			createDictionary(name);
+			return;
+		}
+		
+		swapDictionaries(index, 0);
+	}
+	
+	/**
+	 * Returns the index of the dictionary with the given name or if there's no such dictionary -1.
+	 */
+	private int indexOfDict(String name) {
+		Dictionary curDict = null;
+		
+		for(int i = 0; i < dictionaries.size(); i++) {
+			curDict = dictionaries.get(i);
+			if(curDict.getName() == name) 
+				return i;
+		}
+		
+		return -1;
+	}
+	
+	/**
+	 * Swaps the positions of two dictionaries given by two indices.
+	 */
+	private void swapDictionaries(int from, int to) {
+		if(from >= dictionaries.size() || from < 0 || to >= dictionaries.size() || to < 0)
+			throw new IllegalArgumentException(String.format("The index to (%d) or from (%d) are not inbetween the dictionaries size (0 - (%d))", to, from, dictionaries.size()));
+		
+		Dictionary tmp = dictionaries.get(from);
+		dictionaries.set(from, dictionaries.get(to));
+		dictionaries.set(to, tmp);
+	}
+	
+	/**
+	 * Checks if the given name appears in any dictionary and returns the result.
+	 */
+	public boolean wordExists(String name) {
+		for(Dictionary dic : dictionaries) {
+			if(dic.contains(name))
+				return true;
+		}
+		
+		return false;
+	}
+	
+	/**
+	 * Returns the word with the given name. When the word doesn't exist
+	 * in any dictionary it returns null.
+	 */
+	public Word getWord(String name) {
+		if(isNamespaceName(name)) {
+			
+		}
+		else {
+			
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * Checks if the given name contains a namespace or not. A namespace is in front of the name
+	 * and delimited by an dot. E.g.: namespace.word is a namespace word with namespace as namespace
+	 * and word as word name. namespace.. is also a namespace word with namespace as namespace and
+	 * . as word name. Attention: namespace. would be only a word name!
+	 * There must be valid alphabetic letters after the dot to make it a namespace name.
+	 */
+	private boolean isNamespaceName(String name) {
+		char[] chars = name.toCharArray();
+
+		for(int i = 0; i < chars.length; i++) {
+			if(chars[i] == '.' && (i < (chars.length - 1))
+				return true;
+		}
+		
+		return false;
+	}
+	
+	/**
+	 * 
+	 * @param wholeName
+	 * @return
+	 */
+	private String getNamespace(String wholeName) {
+		wholeName.substring(0, getNamespaceDelimiterIndex(wholeName));
+	}
+	
+	/**
+	 * Returns the index of the delimiting dot in the namespace name
+	 * of a word.
+	 */
+	private int getNamespaceDelimiterIndex(String wholeName) {
+		int i = 0;
+		char[] chars = wholeName.toCharArray();
+		
+		for(; i < chars.length; i++) {
+			if(chars[i] == '.')
+				break;
+		}
+		
+		return i;
+	}
+}

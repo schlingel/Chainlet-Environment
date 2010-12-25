@@ -1,0 +1,9 @@
+package at.chainlet.rse.core;
+
+public class HistorizedWordList_Test {
+	
+	@Test
+	public void emptyListShouldReturnFalseOnHasOlderVersions() {
+		HistorizedWordList wl = new HistorizedWordList();
+	}
+}

@@ -87,4 +87,103 @@ public class Library {
 		dictionaries.set(from, dictionaries.get(to));
 		dictionaries.set(to, tmp);
 	}
+	
+	/**
+	 * Checks if the given name appears in any dictionary and returns the result.
+	 */
+	public boolean wordExists(String name) {
+		return (getWord(name) != null);
+	}
+	
+	/**
+	 * Returns the word with the given name. When the word doesn't exist
+	 * in any dictionary it returns null.
+	 */
+	public Word getWord(String name) {
+		if(isNamespaceName(name)) {
+			String dictName = getNamespace(name);
+			Dictionary dict = getDictionary(dictName);
+			String tmp = getWordName(name);
+			if(dict == null)
+				return null;
+			
+			return dict.get(getWordName(name));
+		}
+		
+		return getAnyWordWithName(name);
+	}
+	
+	/**
+	 * Checks if the given name contains a namespace or not. A namespace is in front of the name
+	 * and delimited by an dot. E.g.: namespace.word is a namespace word with namespace as namespace
+	 * and word as word name. namespace.. is also a namespace word with namespace as namespace and
+	 * . as word name. Attention: namespace. would be only a word name!
+	 * There must be valid alphabetic letters after the dot to make it a namespace name.
+	 */
+	private boolean isNamespaceName(String name) {
+		char[] chars = name.toCharArray();
+
+		for(int i = 0; i < chars.length; i++) {
+			if(chars[i] == '.' && (i < (chars.length - 1)))
+				return true;
+		}
+		
+		return false;
+	}
+	
+	/**
+	 * Gets the namespace part of the whole name of a namespace name.
+	 */
+	private String getNamespace(String wholeName) {
+		return wholeName.substring(0, getNamespaceDelimiterIndex(wholeName));
+	}
+	
+	/**
+	 * Returns the index of the delimiting dot in the namespace name
+	 * of a word.
+	 */
+	private int getNamespaceDelimiterIndex(String wholeName) {
+		int i = 0;
+		char[] chars = wholeName.toCharArray();
+		
+		for(; i < chars.length; i++) {
+			if(chars[i] == '.')
+				break;
+		}
+		
+		return i;
+	}
+	
+	/**
+	 * Returns the dictionary with the given name or null if the dictionary
+	 * doesn't exist.
+	 */
+	private Dictionary getDictionary(String name) {
+		for(Dictionary dic : dictionaries) {
+			if(dic.getName().equals(name))
+				return dic;
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * Returns the name of an word out of an namespace word name.
+	 */
+	private String getWordName(String wholeName) {
+		return wholeName.substring(getNamespaceDelimiterIndex(wholeName) + 1, wholeName.length());
+	}
+	
+	/**
+	 * Returns the first word with the given name.
+	 */
+	private Word getAnyWordWithName(String name) {
+		for(Dictionary dic : dictionaries) {
+			Word w = dic.get(name);
+			if( w != null)
+				return w;
+		}
+		
+		return null;
+	}
 }

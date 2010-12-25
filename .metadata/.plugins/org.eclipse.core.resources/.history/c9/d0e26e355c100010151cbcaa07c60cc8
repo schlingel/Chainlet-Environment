@@ -1,0 +1,11 @@
+package at.chainlet.rse.core;
+
+import java.util.ArrayList;
+
+
+/**
+ * The
+ */
+public class HistorizedWordList extends ArrayList<Word> {
+
+}

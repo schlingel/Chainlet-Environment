@@ -1,0 +1,23 @@
+package at.chainlet.rse.core;
+
+import org.junit.Test;
+
+import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
+import static org.junit.Assert.*;
+
+public class HistorizedWordList_Test {
+	
+	@Test
+	public void emptyListShouldReturnFalseOnHasOlderVersions() {
+		HistorizedWordList wl = new HistorizedWordList();
+		assertFalse(wl.hasOlderVersions());
+	}
+	
+	@Test
+	public void emptyListShouldReturnFalseOnHasNewerVersions() {
+		HistorizedWordList wl = new HistorizedWordList();
+		assertFalse(wl.hasNewerVersions());
+	}
+	
+	
+}

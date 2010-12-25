@@ -1,0 +1,14 @@
+package at.chainlet.rse.core.datastructures;
+
+import java.util.ArrayList;
+
+import at.chainlet.rse.core.Word;
+
+/**
+ * 
+ * @author zombie
+ *
+ */
+public class HistorizedWordList extends ArrayList<Word> {
+
+}

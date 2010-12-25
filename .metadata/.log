@@ -8,3 +8,13 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY org.eclipse.ui 4 4 2010-12-21 19:48:52.058
 !MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+!SESSION 2010-12-25 19:23:09.722 -----------------------------------------------
+eclipse.buildId=I20100608-0911
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_AT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 4 4 2010-12-25 19:56:13.089
+!MESSAGE Unable to find Action Set: org.chromium.debug.ui.ChromiumDebugActionSet

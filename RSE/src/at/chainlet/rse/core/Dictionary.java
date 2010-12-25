@@ -1,5 +1,6 @@
 package at.chainlet.rse.core;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
@@ -16,17 +17,17 @@ public class Dictionary {
 	/**
 	 * Contains the words.
 	 */
-	private HashMap<String, Word> words;
+	private HashMap<String, ArrayList<Word>> words;
 	
 	/**
 	 * Initializes the dictionary.
 	 */
-	public Dictionary(String _name, HashMap<String, Word> _words) {
+	public Dictionary(String _name, HashMap<String, ArrayList<Word>> _words) {
 		words = _words;
 		name = _name;
 	}
 	
-	public Dictionary(String _name) { this(_name, new HashMap<String, Word>()); }
+	public Dictionary(String _name) { this(_name, new HashMap<String, ArrayList<Word>>()); }
 	
 	public Dictionary() { this(""); }
 	
@@ -40,7 +41,16 @@ public class Dictionary {
 		if(word.getName() == "")
 			throw new RSEInvalidStateException("Every word must have a set name!");
 		
-		words.put(word.getName(), word);
+		if(words.containsKey(word.getName())) {
+			ArrayList<Word> wordList = words.get(word.getName());
+			wordList.add(0, word);
+			words.put(word.getName(), wordList);			
+		}
+		else {
+			ArrayList<Word> wordList = new ArrayList<Word>();
+			wordList.add(word);
+			words.put(word.getName(), wordList);
+		}
 	}
 	
 	/**
@@ -67,7 +77,13 @@ public class Dictionary {
 	/**
 	 * Returns the word with the name from word list in the dictionary.
 	 */
-	public Word get(String name) { return words.get(name); }
+	public Word get(String name) { 
+		ArrayList<Word> wordList = words.get(name);
+		if(wordList == null)
+			return null;
+		
+		return wordList.get(0);
+	}
 	
 	/**
 	 * Returns the name of the dictionary.

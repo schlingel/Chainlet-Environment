@@ -72,4 +72,64 @@ public class Dictionary_Tests extends RSECoreTest {
 		dic.add(w);
 		assertEquals(w, dic.get(w.getName()));
 	}
+	
+	@Test
+	public void getShouldReturnTheLatestWord() throws RSEInvalidStateException {
+		Dictionary dic = getMockDict("dict");
+		Word w1 = getMockWord("w");
+		
+		for(int i = 0; i < 1000; i++) {
+			dic.add(getMockWord("w"));
+		}
+		
+		dic.add(w1);
+		assertEquals(w1, dic.get("w"));
+	}
+	
+	@Test
+	public void setOlderVersionOfTwiceShouldReturnTheThirdLatestVersion() throws RSEInvalidStateException {
+		Dictionary dic = getMockDict("test");
+		Word[] words = new Word[3];
+		
+		for(int i = 0; i < 3; i++) {
+			words[i] = getMockWord("testibert");
+			dic.add(words[i]);
+		}
+		
+		dic.setOlderVersionOf("testibert");
+		dic.setOlderVersionOf("testibert");
+		
+		assertEquals(dic.get("testibert"), words[0]);
+	}
+	
+	@Test
+	public void setOlderVersionShouldReturnFalseIfThereNotThatManyOldVersions() {
+		Dictionary dic = getMockDict("test");
+		Word[] words = new Word[2];
+		
+		for(int i = 0; i < 2; i++) {
+			words[i] = getMockWord("testibert");
+			dic.add(words[i]);
+		}
+		
+		dic.setOlderVersionOf("testibert");
+		dic.setOlderVersionOf("testibert");
+		
+		assertFalse(dic.setOlderVersionOf("testibert"));
+	}
+	
+	@Test
+	public void setOlderVersionShouldReturnTrueIfItWorked() {
+		Dicionary dic = getMockDict("test");
+		Word[] words = new Word[3];
+		
+		for(int i = 0; i < 3; i++) {
+			words[i] = getMockWord("testibert");
+			dic.add(words[i]);
+		}
+		
+		dic.setOlderVersionOf("testibert");
+		assertTrue(dic.setOlderVersionOf("testibert"));
+		assertEquals(words[0], dic.get("testibert"));
+	}
 }
