@@ -17,17 +17,17 @@ public class Dictionary {
 	/**
 	 * Contains the words.
 	 */
-	private HashMap<String, ArrayList<Word>> words;
+	private HashMap<String, JournalingWordList> words;
 	
 	/**
 	 * Initializes the dictionary.
 	 */
-	public Dictionary(String _name, HashMap<String, ArrayList<Word>> _words) {
+	public Dictionary(String _name, HashMap<String, JournalingWordList> _words) {
 		words = _words;
 		name = _name;
 	}
 	
-	public Dictionary(String _name) { this(_name, new HashMap<String, ArrayList<Word>>()); }
+	public Dictionary(String _name) { this(_name, new HashMap<String, JournalingWordList>()); }
 	
 	public Dictionary() { this(""); }
 	
@@ -41,16 +41,14 @@ public class Dictionary {
 		if(word.getName() == "")
 			throw new RSEInvalidStateException("Every word must have a set name!");
 		
+		JournalingWordList wordList = new JournalingWordList();
+		
 		if(words.containsKey(word.getName())) {
-			ArrayList<Word> wordList = words.get(word.getName());
-			wordList.add(0, word);
-			words.put(word.getName(), wordList);			
+			wordList = words.get(word.getName());
 		}
-		else {
-			ArrayList<Word> wordList = new ArrayList<Word>();
-			wordList.add(word);
-			words.put(word.getName(), wordList);
-		}
+		
+		wordList.add(word);
+		words.put(word.getName(), wordList);					
 	}
 	
 	/**
@@ -78,11 +76,11 @@ public class Dictionary {
 	 * Returns the word with the name from word list in the dictionary.
 	 */
 	public Word get(String name) { 
-		ArrayList<Word> wordList = words.get(name);
+		JournalingWordList wordList = words.get(name);
 		if(wordList == null)
 			return null;
 		
-		return wordList.get(0);
+		return wordList.current();
 	}
 	
 	/**
@@ -90,4 +88,30 @@ public class Dictionary {
 	 * @return
 	 */
 	public String getName() { return name; }
+	
+	/**
+	 * Sets the dictionary pointer to the next older version of the given word. If there's an older
+	 * version the method returns true, if not it returns false.
+	 */
+	public boolean setOlderVersionOf(String wordName) {
+		if(contains(wordName)) {
+			JournalingWordList wl = words.get(wordName);
+			return wl.goBackInJournal();
+		}
+		
+		return false;
+	}
+	
+	/**
+	 * Sets the dictionary pointer to the next newer version of the given word. If there's a newer
+	 * version the method returns true, if not it returns false.
+	 */
+	public boolean setNewerVersionOf(String wordName) {
+		if(contains(wordName)) {
+			JournalingWordList wl = words.get(wordName);
+			return wl.goForthInJournal();
+		}
+		
+		return false;
+	}
 }

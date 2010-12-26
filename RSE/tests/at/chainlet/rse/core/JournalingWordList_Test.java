@@ -120,8 +120,19 @@ public class JournalingWordList_Test extends RSECoreTest {
 	public void currentShouldReturnLatestEntryAfterRemovingEntries() {
 		JournalingWordList wl = new JournalingWordList();
 		for(int i = 0; i < 100; i++) { wl.add(getMockWord("word")); }
-		for(int i = 0; i < 100; i++) { wl.remove(wl.count() - 1); }
+		for(int i = 0; i < 50; i++) { wl.remove(wl.count() - 1); }
 		
 		assertEquals(wl.get(wl.count() - 1), wl.current());
+	}
+	
+	@Test
+	public void currentShouldReturnFirstIfItsCalledToManyTimes() {
+		JournalingWordList wl = new JournalingWordList();
+		Word w = getMockWord("test");
+		wl.add(w);
+		for(int i = 0; i < 100; i++) { wl.add(getMockWord("test")); }
+		for(int i = 0; i < 300; i++) { wl.goBackInJournal(); }
+		
+		assertEquals(w, wl.current());
 	}
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="at.chainlet.rse.core" project="RSE" tests="40" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true">
+    <testcase name="emptyListShouldReturnFalseOnHasOlderVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.06"/>
+    <testcase name="emptyListShouldReturnFalseOnHasNewerVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="notEmptyListShouldReturnTrueOnHasOlderVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="getCurrentVersionShouldReturnSecondVersion" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="getCurrentVersionShouldReturnFirstVersion" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="goBackInJournalShouldReturnFalseInEmptyWordList" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="goBackInJournalShouldReturnFalseInNewWordList" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="goForthInJournalShouldReturnFalseIfTheCurrentIsTheLatest" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="goForthInJournalInEmptyWordListShouldReturnFalse" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="goForthInJournalShouldReturnLatestAfterGoBackOnce" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="currentShouldReturnLatestEntryAfterRemovingEntries" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+    <testcase name="currentShouldReturnFirstIfItsCalledToManyTimes" classname="at.chainlet.rse.core.JournalingWordList_Test" incomplete="true"/>
+  </testsuite>
+  <testsuite name="at.chainlet.rse.core.Library_Tests" incomplete="true">
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInNotEmptyDict" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="prioritizeShouldCreateDictOnNotExistingNamesInEmptyDict" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="prioritizeShouldPrioritizeExistingDict" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="addShouldTrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnEmptyName" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="createDictionaryShouldThrowIllegalArgumentExceptionOnNullValue" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="getWorkingDictionaryShouldReturnNullInEmptyLibrary" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="getWorkingDictionaryShouldReturnLatestDict" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="wordExistsShouldReturnFalseOnNotExistingWord" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="wordExistsShouldReturnTrueOnExistingWordAndOnlyTheNameAsParameter" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="wordExistsShouldReturnTrueOnExistingWordWithNamespaceAndNameAsParameter" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="getWordShouldReturnLatestWordWithName" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="getWordShouldReturnWordFromTheChoosenDictionary" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="getWordShouldReturnNullForNotExistingName" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+    <testcase name="getWordShouldReturnNullForNotExistingNameInGivenNamespaceWordName" classname="at.chainlet.rse.core.Library_Tests" incomplete="true"/>
+  </testsuite>
+  <testsuite name="at.chainlet.rse.core.Dictionary_Tests" incomplete="true">
+    <testcase name="addNullWordShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="addNamelesWordShouldThrowRSEInvalidStateException" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="containsShouldReturnTrueIfWordExists" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist1" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist2" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="containsShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="containsShouldThrowRSEInvalidStateExceptionOnEmptyName" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="getShouldReturnNullOnUnknownName" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="getShouldReturnTheWordWithTheGivenName" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="getShouldReturnTheLatestWord" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="setOlderVersionOfTwiceShouldReturnTheThirdLatestVersion" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="setOlderVersionShouldReturnFalseIfThereNotThatManyOldVersions" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+    <testcase name="setOlderVersionShouldReturnTrueIfItWorked" classname="at.chainlet.rse.core.Dictionary_Tests" incomplete="true"/>
+  </testsuite>
+</testrun>

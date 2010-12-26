@@ -89,4 +89,24 @@ public class JournalingWordList extends ArrayList<Word> {
 		curIndex = count();
 		return super.add(word);
 	}
+	
+	/**
+	 * Removes the word from the word list and sets the current pointer to the latest word.
+	 */
+	@Override
+	public Word remove(int index) {
+		int newCurIndex = (count() > 0) ? count() - 2 : 0;
+		curIndex = newCurIndex;
+		resetCurIndexOnFalseIndex(index);
+		return super.remove(index);
+	}
+	
+	/**
+	 * Resets the current index pointer to 0 if the index is not valid.
+	 */
+	private void resetCurIndexOnFalseIndex(int index) {
+		if(index < 0 || index >= count()) {
+			curIndex = 0;
+		}
+	}
 }

@@ -103,7 +103,7 @@ public class Dictionary_Tests extends RSECoreTest {
 	}
 	
 	@Test
-	public void setOlderVersionShouldReturnFalseIfThereNotThatManyOldVersions() {
+	public void setOlderVersionShouldReturnFalseIfThereNotThatManyOldVersions() throws RSEInvalidStateException {
 		Dictionary dic = getMockDict("test");
 		Word[] words = new Word[2];
 		
@@ -119,7 +119,7 @@ public class Dictionary_Tests extends RSECoreTest {
 	}
 	
 	@Test
-	public void setOlderVersionShouldReturnTrueIfItWorked() {
+	public void setOlderVersionShouldReturnTrueIfItWorked() throws RSEInvalidStateException {
 		Dictionary dic = getMockDict("test");
 		Word[] words = new Word[3];
 		

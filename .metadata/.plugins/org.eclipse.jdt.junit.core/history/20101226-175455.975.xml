@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="JournalingWordList_Test" project="RSE" tests="12" started="12" failures="1" errors="1" ignored="0">
+  <testsuite name="at.chainlet.rse.core.JournalingWordList_Test" time="0.019">
+    <testcase name="emptyListShouldReturnFalseOnHasOlderVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.007"/>
+    <testcase name="emptyListShouldReturnFalseOnHasNewerVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="notEmptyListShouldReturnTrueOnHasOlderVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.001"/>
+    <testcase name="getCurrentVersionShouldReturnSecondVersion" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="getCurrentVersionShouldReturnFirstVersion" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goBackInJournalShouldReturnFalseInEmptyWordList" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.001"/>
+    <testcase name="goBackInJournalShouldReturnFalseInNewWordList" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goForthInJournalShouldReturnFalseIfTheCurrentIsTheLatest" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.001"/>
+    <testcase name="goForthInJournalInEmptyWordListShouldReturnFalse" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goForthInJournalShouldReturnLatestAfterGoBackOnce" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.001"/>
+    <testcase name="currentShouldReturnLatestEntryAfterRemovingEntries" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.006">
+      <error>java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.get(Unknown Source)
+	at at.chainlet.rse.core.JournalingWordList_Test.currentShouldReturnLatestEntryAfterRemovingEntries(JournalingWordList_Test.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+    <testcase name="currentShouldReturnFirstIfItsCalledToManyTimes" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.001">
+      <failure>java.lang.AssertionError: expected:&lt;at.chainlet.rse.core.MockWord@ad3ba4&gt; but was:&lt;at.chainlet.rse.core.MockWord@126b249&gt;
+	at org.junit.Assert.fail(Assert.java:91)
+	at org.junit.Assert.failNotEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:126)
+	at org.junit.Assert.assertEquals(Assert.java:145)
+	at at.chainlet.rse.core.JournalingWordList_Test.currentShouldReturnFirstIfItsCalledToManyTimes(JournalingWordList_Test.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>
