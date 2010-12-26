@@ -28,7 +28,7 @@ public class JournalingWordList extends ArrayList<Word> {
 	 * Checks if the word list has older versions.
 	 */
 	public boolean hasOlderVersions() {
-		return (curIndex != 0 && count() != 0);
+		return (curIndex != 0);
 	}
 	
 	/**

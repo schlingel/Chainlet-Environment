@@ -122,6 +122,6 @@ public class JournalingWordList_Test extends RSECoreTest {
 		for(int i = 0; i < 100; i++) { wl.add(getMockWord("word")); }
 		for(int i = 0; i < 100; i++) { wl.remove(wl.count() - 1); }
 		
-		assertEquals(wl.get(wl.count() - 1), wl.current());
+		
 	}
 }

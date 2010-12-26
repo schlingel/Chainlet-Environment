@@ -97,7 +97,7 @@ public class JournalingWordList_Test extends RSECoreTest {
 			wl.add(getMockWord("word"));
 		}
 		
-		for(int i = 0; i < 30; i++) { wl.remove(wl.count() - 1); }
+		for(int i = 0; i < 30; i += 2) { wl.remove(i); }
 		for(int i = 0; i < 70; i++) { wl.remove(0); }
 		
 		assertEquals(0, wl.count());
@@ -113,15 +113,6 @@ public class JournalingWordList_Test extends RSECoreTest {
 		
 		wl.goBackInJournal();
 		wl.goForthInJournal();
-		assertEquals(wl.get(wl.count() - 1), wl.current());
-	}
-	
-	@Test
-	public void currentShouldReturnLatestEntryAfterRemovingEntries() {
-		JournalingWordList wl = new JournalingWordList();
-		for(int i = 0; i < 100; i++) { wl.add(getMockWord("word")); }
-		for(int i = 0; i < 100; i++) { wl.remove(wl.count() - 1); }
-		
 		assertEquals(wl.get(wl.count() - 1), wl.current());
 	}
 }

@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentLinkedQueue"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
@@ -18,4 +17,6 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Word"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.HistorizedWordList"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.JournalingWordList"/>
 </qualifiedTypeNameHistroy>
