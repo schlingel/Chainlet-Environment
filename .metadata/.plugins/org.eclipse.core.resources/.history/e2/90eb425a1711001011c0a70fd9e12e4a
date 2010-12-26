@@ -1,0 +1,8 @@
+package at.chainlet.rse.core;
+
+/**
+ * Observes all words which run in a RSE VM.
+ */
+public interface WordStatusObserver {
+	public void wordFinished(Word w);
+}

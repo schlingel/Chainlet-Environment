@@ -1,0 +1,10 @@
+package at.chainlet.rse.core;
+
+/*
+ * Why an extra exchange center for a simple observer pattern?
+ * This design decision is made because 
+ * 
+ */
+public class WordStatusObserverExchanger {
+
+}

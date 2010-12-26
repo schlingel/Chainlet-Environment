@@ -1,0 +1,20 @@
+package at.chainlet.rse.core;
+
+/*
+ * Why an extra exchange center for a simple observer pattern?
+ * This design decision is made because I have the future in sense :-)
+ * It's needed to ensure simple debug functionality and adds some value
+ * to the shell.
+ * 
+ * In the near future two classes will be notified when a word finishes its
+ * work:
+ *  - The VM itself
+ *  - The RSE shell.
+ */
+/**
+ * This is the center of a observer pattern with multiple observers which all gets
+ * notified when some of the observables change.
+ */
+public class WordStatusObserverExchanger {
+
+}

@@ -1,0 +1,23 @@
+package at.chainlet.rse.core;
+/**
+ * Basic interface for an executable word.
+ */
+public interface Word {
+	/**
+	 * Returns the word of the name.
+	 */
+	public String getName();
+	
+	/**
+	 * This method runs the word.
+	 */
+	public void execute();
+	
+	/**
+	 * Should be called when the Word has finished its worked. After this method call the
+	 * interpreter executes the next word.
+	 */
+	public void finished();
+	
+	public void registerVM(RudimentaryStackVM vm)
+}

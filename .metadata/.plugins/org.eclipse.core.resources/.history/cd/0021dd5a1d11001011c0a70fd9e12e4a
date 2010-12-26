@@ -1,0 +1,12 @@
+package at.chainlet.rse.core;
+
+public class WordStatusObserverExchanger_Test extends RSECoreTest {
+	public void allObserversGetCalled() {
+		WordStatusObserverExchanger we = getWordStatusObserverExchanger();
+		Word[] words = new Word[1000];
+		
+		for(int i = 0; i < 1000; i++) {
+			words[i] = getMockWord("test" + i)
+		}
+	}
+}

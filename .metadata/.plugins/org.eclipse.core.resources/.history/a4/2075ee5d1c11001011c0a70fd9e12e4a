@@ -1,0 +1,10 @@
+package at.chainlet.rse.core;
+
+public class MockWordStatusObserver implements WordStatusObserver {
+	@Override
+	public void wordFinished(Word w) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+package at.chainlet.rse.core;
+
+import org.junit.Test;
+import at.chainlet.rse.core.exceptions.RSEInvalidActionException;
+import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
+import static org.junit.Assert.*;
+
+public class WordStatusObserverExchanger_Test extends RSECoreTest {
+	@Test
+	public void allObserversGetCalled() {
+		WordStatusObserverExchanger we = getWordStatusObserverExchanger();
+		MockWord word = (MockWord)getMockWord("test");
+		word.setObserverExchanger(we);
+		MockWordStatusObserver[] observers = new MockWordStatusObserver[1000];
+		
+		for(int i = 0; i < 1000; i++) {
+			observers[i] = new MockWordStatusObserver();
+			we.registerObserver(observers[i]);
+		}
+		
+		word.finished();
+		
+		for(int i = 0; i < 1000; i++) {
+			assertTrue(observers[i].gotCalled());
+		}
+	}
+	
+	@Test
+	public void removedObserverDontGetCalled() {
+		WordStatusObserverExchanger we = getWordStatusObserverExchanger();
+		MockWord word = (MockWord)getMockWord("test");
+		word.setObserverExchanger(we);
+		MockWordStatusObserver[] observers = new MockWordStatusObserver[1000];
+		
+		for(int i = 0; i < 1000; i++) {
+			observers[i] = new MockWordStatusObserver();
+			we.registerObserver(observers[i]);
+		}
+		
+		for(int i = 0; i < 500; i++) {
+			we.unregisterObserver(observers[i]);
+		}
+		
+		word.finished();
+		
+		for(int i = 0; i < 500; i++) {
+			assertFalse(observers[i].gotCalled());
+		}
+		
+		for(int i = 500; i < 1000; i++) {
+			assertTrue(observers[i].gotCalled());
+		}
+	}
+	
+	@Test
+	public void 
+}

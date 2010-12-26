@@ -1,0 +1,5 @@
+package at.chainlet.rse.core;
+
+public interface WordStatusObserver {
+	public void wordFinished(Word w);
+}

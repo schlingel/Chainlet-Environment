@@ -1,0 +1,16 @@
+package at.chainlet.rse.core;
+
+public class MockWordStatusObserver implements WordStatusObserver {
+	private Word lastWord;
+	
+	private boolean isCalled;
+	
+	public MockWordStatusObserver() { isCalled = false; }
+	
+	@Override
+	public void wordFinished(Word w) {
+		isCalled = true;
+		lastWord = word;
+	}
+
+}

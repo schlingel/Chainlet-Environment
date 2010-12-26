@@ -12,4 +12,16 @@ public interface Word {
 	 * This method runs the word.
 	 */
 	public void execute();
+	
+	/**
+	 * Should be called when the Word has finished its worked. After this method call the
+	 * interpreter executes the next word.
+	 */
+	public void finished();
+	
+	/**
+	 * Registers the virtual machine in the word. This is needed to get the values which
+	 * are used in the word into the VM.
+	 */
+	public void registerVM(RudimentaryStackVM vm);
 }

@@ -12,4 +12,8 @@ public abstract class RSECoreTest {
 	protected synchronized Dictionary getMockDict(String name) { return new Dictionary(name); }
 	
 	protected synchronized Library getMockLibrary() { return new Library(); }
+	
+	protected synchronized WordStatusObserver getMockWordStatsObserver() { return new MockWordStatusObserver(); }
+
+	protected synchronized WordStatusObserverExchanger getWordStatusObserverExchanger() { return new WordStatusObserverExchanger(); }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="WordStatusObserverExchanger_Test" project="RSE" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="at.chainlet.rse.core.WordStatusObserverExchanger_Test" time="0.015">
+    <testcase name="allObserversGetCalled" classname="at.chainlet.rse.core.WordStatusObserverExchanger_Test" time="0.006"/>
+    <testcase name="removedObserverDontGetCalled" classname="at.chainlet.rse.core.WordStatusObserverExchanger_Test" time="0.009"/>
+  </testsuite>
+</testrun>

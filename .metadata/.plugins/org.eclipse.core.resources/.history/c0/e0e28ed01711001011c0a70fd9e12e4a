@@ -1,0 +1,48 @@
+package at.chainlet.rse.core;
+
+import java.util.ArrayList;
+
+/*
+ * Why an extra exchange center for a simple observer pattern?
+ * This design decision is made because I have the future in sense :-)
+ * It's needed to ensure simple debug functionality and adds some value
+ * to the shell.
+ * 
+ * In the near future two classes will be notified when a word finishes its
+ * work:
+ *  - The VM itself
+ *  - The RSE shell.
+ */
+/**
+ * This is the center of a observer pattern with multiple observers which all gets
+ * notified when some of the observables change.
+ */
+public class WordStatusObserverExchanger {
+	/**
+	 * Contains the list of the observers.
+	 */
+	private ArrayList<WordStatusObserver> observers;
+	
+	public WordStatusObserverExchanger() {
+		observers = new ArrayList<WordStatusObserver>();
+	}
+	
+	/**
+	 * Registers the given observer if it isn't allready registered. Throws a null pointer exception
+	 * on null values!
+	 */
+	public void registerObserver(WordStatusObserver statusObserver) {
+		if(statusObserver == null)
+			throw new IllegalArgumentException("The word status observer must not be null!");
+		
+		if(!observers.contains(statusObserver))
+			observers.add(statusObserver);
+	}
+	
+	/**
+	 * Removes the status observer from the observers list if it exists.
+	 */
+	public boolean unregisterObserver(WordStatusObserver statusObserver) {
+		return observers.remove(statusObserver);
+	}
+}
