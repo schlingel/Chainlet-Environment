@@ -1,0 +1,34 @@
+package at.chainlet.rse.core;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class JournalingWordList_Test extends RSECoreTest {
+	
+	@Test
+	public void emptyListShouldReturnFalseOnHasOlderVersions() {
+		JournalingWordList wl = new JournalingWordList();
+		assertFalse(wl.hasOlderVersions());
+	}
+	
+	@Test
+	public void emptyListShouldReturnFalseOnHasNewerVersions() {
+		JournalingWordList wl = new JournalingWordList();
+		assertFalse(wl.hasNewerVersions());
+	}
+	
+	@Test
+	public void notEmptyListShouldReturnTrueOnHasOlderVersions() {
+		JournalingWordList wl = new JournalingWordList();
+		for(int i = 0; i < 10; i++) {
+			wl.add(getMockWord("word" + i));
+		}
+			
+		assertTrue(wl.hasOlderVersions());
+	}
+	
+	@Test
+	public void getCurrentVersionShouldReturnSecondVersion() {
+		
+	}
+}
