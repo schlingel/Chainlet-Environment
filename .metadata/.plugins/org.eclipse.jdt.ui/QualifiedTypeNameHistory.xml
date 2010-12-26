@@ -11,9 +11,11 @@
 <fullyQualifiedTypeName name="at.chainlet.rse.core.MockWord"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Library"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.RSECoreTest"/>
-<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidActionException"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidStateException"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidActionException"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Dictionary"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.Word"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.HistorizedWordList"/>
 </qualifiedTypeNameHistroy>

@@ -120,7 +120,7 @@ public class Dictionary_Tests extends RSECoreTest {
 	
 	@Test
 	public void setOlderVersionShouldReturnTrueIfItWorked() {
-		Dictionary dic = getMockDict("test");
+		Dicionary dic = getMockDict("test");
 		Word[] words = new Word[3];
 		
 		for(int i = 0; i < 3; i++) {
