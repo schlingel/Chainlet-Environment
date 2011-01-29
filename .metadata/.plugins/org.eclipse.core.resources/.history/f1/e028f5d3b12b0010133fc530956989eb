@@ -1,0 +1,55 @@
+package at.chainlet.rse.core;
+
+import static org.hamcrest.core.Is.is;
+
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+import org.junit.Test;
+
+import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
+import static org.junit.Assert.*;
+
+/**
+ * Testclass for the rudimentary stack environment VM.
+ */
+public class RudimentaryStackVM_Test extends RSECoreTest {
+	@Test
+	public void pollNextTerm_ShouldExecuteTermAsWordIfItsInTheLibrary() throws RSEInvalidStateException {
+		Dictionary d = getMockDict("test1");
+		MockWord w = (MockWord)getMockWord("test");
+		d.add(w);
+		RudimentaryStackVM vm = createDefaultVm(d);
+		
+		assertThat(23, is(12));
+	}
+	
+	@Test
+	public void parse_ShouldSplitTheStringBySpacesAndPutThemAsSingleTermsInTheTermQueue() {
+		RudimentaryStackVM vm = createDefaultVm(null);
+		StringBuffer sb = new StringBuffer();
+		String[] entries = new String[] { "123", "#as", "649", "asdf", "fdas.*", "asdf:", "§=)(", "!", "?=)(ß0}[]}", "}[[#+" };
+		for(String entry : entries) {
+			sb.append(entry);
+		}
+		
+		vm.parse(sb.toString());
+		ConcurrentLinkedQueue<String> terms = vm.getTermQueue();
+		
+		for(int i = entries.length - 1; i > 0; i--) {
+			String term = entries[i];
+			assertThat(terms.poll(), is(term));
+		}
+		
+	}
+	
+	/**
+	 * Creates a new stack VM with the given words in the given library.
+	 */
+	private RudimentaryStackVM createDefaultVm(Dictionary dic) {
+		RudimentaryStackVM vm = new RudimentaryStackVM();
+		if(dic != null)
+			vm.getLibrary().add(dic);
+
+		return vm;
+	}
+}

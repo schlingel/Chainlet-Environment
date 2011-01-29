@@ -1,0 +1,13 @@
+package at.chainlet.rse.core;
+
+import static org.hamcrest.core.Is.is;
+
+/**
+ * Testclass for the rudimentary stack environment VM.
+ */
+public class RudimentaryStackVM_Test {
+	@Test
+	public void test1() {
+		assertThat(23, is(12));
+	}
+}

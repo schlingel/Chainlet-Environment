@@ -6,6 +6,8 @@ package at.chainlet.rse.core.exceptions;
  * needs a not empty stack. If the stack is empty the word within throws an InvalidActionException.
  */
 public class RSEInvalidActionException extends Exception {
+	private static final long serialVersionUID = 1L;
+
 	public RSEInvalidActionException(String msg) { super(msg); }
 	
 	public RSEInvalidActionException() { super(); }

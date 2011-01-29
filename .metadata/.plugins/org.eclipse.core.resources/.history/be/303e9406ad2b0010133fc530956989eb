@@ -1,0 +1,8 @@
+package at.chainlet.rse.core;
+
+/**
+ * Testclass for the rudimentary stack environment VM.
+ */
+public class RudimentaryStackVM_Test {
+
+}

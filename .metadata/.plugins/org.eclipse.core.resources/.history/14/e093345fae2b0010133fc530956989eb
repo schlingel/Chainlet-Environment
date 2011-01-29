@@ -1,0 +1,28 @@
+package at.chainlet.rse.core;
+
+import static org.hamcrest.core.Is.is;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ * Testclass for the rudimentary stack environment VM.
+ */
+public class RudimentaryStackVM_Test extends RSECoreTest {
+	@Test
+	public void pollNextTerm_ShouldExecuteTermAsWordIfItsInTheLibrary() {
+		Word w = getMockWord("executable");
+		
+		
+		assertThat(23, is(12));
+	}
+	
+	/**
+	 * Creates a new stack VM with the given words in the given library.
+	 */
+	private RudimentaryStackVM createDefaultVm(Dictionary ) {
+		return null;
+	}
+}

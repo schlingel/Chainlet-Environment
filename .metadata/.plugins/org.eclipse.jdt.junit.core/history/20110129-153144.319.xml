@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="Rerun at.chainlet.rse.core.JournalingWordList_Test" project="RSE" tests="12" started="12" failures="0" errors="0" ignored="0">
+  <testsuite name="at.chainlet.rse.core.JournalingWordList_Test" time="0.0">
+    <testcase name="emptyListShouldReturnFalseOnHasOlderVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="emptyListShouldReturnFalseOnHasNewerVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="notEmptyListShouldReturnTrueOnHasOlderVersions" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="getCurrentVersionShouldReturnSecondVersion" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="getCurrentVersionShouldReturnFirstVersion" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goBackInJournalShouldReturnFalseInEmptyWordList" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goBackInJournalShouldReturnFalseInNewWordList" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goForthInJournalShouldReturnFalseIfTheCurrentIsTheLatest" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goForthInJournalInEmptyWordListShouldReturnFalse" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="goForthInJournalShouldReturnLatestAfterGoBackOnce" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="currentShouldReturnLatestEntryAfterRemovingEntries" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+    <testcase name="currentShouldReturnFirstIfItsCalledToManyTimes" classname="at.chainlet.rse.core.JournalingWordList_Test" time="0.0"/>
+  </testsuite>
+</testrun>

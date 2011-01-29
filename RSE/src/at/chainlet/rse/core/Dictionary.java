@@ -1,6 +1,5 @@
 package at.chainlet.rse.core;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import at.chainlet.rse.core.exceptions.RSEInvalidStateException;

@@ -1,8 +1,6 @@
 package at.chainlet.rse.core;
 
 import org.junit.Test;
-import at.chainlet.rse.core.exceptions.RSEInvalidActionException;
-import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
 import static org.junit.Assert.*;
 
 public class WordStatusObserverExchanger_Test extends RSECoreTest {

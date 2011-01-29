@@ -103,7 +103,6 @@ public class Library {
 		if(isNamespaceName(name)) {
 			String dictName = getNamespace(name);
 			Dictionary dict = getDictionary(dictName);
-			String tmp = getWordName(name);
 			if(dict == null)
 				return null;
 			
@@ -168,7 +167,7 @@ public class Library {
 	}
 	
 	/**
-	 * Returns the name of an word out of an namespace word name.
+	 * Returns only the name of the full qualified namespace-name.
 	 */
 	private String getWordName(String wholeName) {
 		return wholeName.substring(getNamespaceDelimiterIndex(wholeName) + 1, wholeName.length());

@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * be returned per default.
  */
 public class JournalingWordList extends ArrayList<Word> {
+	private static final long serialVersionUID = 1L;
 	/**
 	 * Contains the index of the current set word.
 	 */

@@ -16,12 +16,12 @@ import java.util.ArrayList;
  *  To ensure this, the architecture camouflages this a little bit:
  *  
  *  +------+       +-----------------------------+           +--------------------+
- *  | word |------>| WordStatusObserverExchanger |---------->| WordStatusObserver |
+ *  | word |-------| WordStatusObserverExchanger |-----------| WordStatusObserver |
  *  +------+     / +-----------------------------+           +--------------------+
- *     +------+ /     A                    \
+ *     +------+ /     /                    \
  *     | word |/     /                      \
  *     +------+     /                        \
- *        +------+ /                          Y
+ *        +------+ /                          \
  *        | word |/                     +--------------------+
  *        +------+                      | WordStatusObserver |
  *                                      +--------------------+

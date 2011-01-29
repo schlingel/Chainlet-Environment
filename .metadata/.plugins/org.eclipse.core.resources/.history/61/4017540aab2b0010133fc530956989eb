@@ -1,0 +1,73 @@
+package at.chainlet.rse.core;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+/**
+ * This is the core of the RSE system. It contains the logic for managing and starting
+ * words and contains the shared stacks.
+ */
+public class RudimentaryStackVM implements WordStatusObserver {
+	/**
+	 * Contains dictionaries in the configured order. 
+	 */
+	private Library libraries;
+	
+	/**
+	 * Contains the return stack.
+	 */
+	private Stack<Object> returnStack;
+	
+	/**
+	 * Contains the data stack.
+	 */
+	private Stack<Object> dataStack;
+	
+	/**
+	 * Contains the term queue. The term queue contains the splitted parts of the input
+	 * string which gets step by step meaning by the interpret method.
+	 */
+	private ConcurrentLinkedQueue<String> termQueue;
+	
+	/**
+	 * Initializes the VM.
+	 */
+	public RudimentaryStackVM() {
+		initializeDataStructures();
+	}
+	
+	/**
+	 * Initializes the data structures in the VM.
+	 */
+	private void initializeDataStructures() {
+		returnStack = new Stack<Object>();
+		dataStack = new Stack<Object>();
+		termQueue = new ConcurrentLinkedQueue<String>();
+		libraries = new Library();
+	}
+
+	@Override
+	public void wordFinished(Word w) {
+	}
+	
+	private void pollNextTerm() {
+		if(!termQueue.isEmpty()) {
+			
+		}
+	}
+	
+	/**
+	 * 	 
+	 */
+	private void runWord(Word w) {
+		
+	}
+	
+	/**
+	 * Checks the converters and tries to generate an data type out of the literal. If there's
+	 * no converter for the given literal it is put as String on the stack.
+	 */
+	private void parseValueAndPutItOnStack(String name) {
+		throw new IllegalArgumentException();
+	}
+}

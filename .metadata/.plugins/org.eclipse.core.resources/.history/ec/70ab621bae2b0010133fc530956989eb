@@ -1,0 +1,17 @@
+package at.chainlet.rse.core;
+
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ * Testclass for the rudimentary stack environment VM.
+ */
+public class RudimentaryStackVM_Test {
+	@Test
+	public void pollNextTerm_ShouldExecuteTermAsWordIfItsInTheLibrary() {
+		Word w = get
+		
+		assertThat(23, is(12));
+	}
+}

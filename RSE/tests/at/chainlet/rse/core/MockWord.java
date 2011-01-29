@@ -1,6 +1,8 @@
 package at.chainlet.rse.core;
 
 public class MockWord implements Word {
+	private static int executionCounter = 0;
+	
 	private WordStatusObserverExchanger exchanger;
 	
 	private String name;
@@ -13,7 +15,11 @@ public class MockWord implements Word {
 	public String getName() { return name; }
 	
 	@Override
-	public void execute() { }
+	public void execute() { 
+		 synchronized(this) {  
+			 executionCounter++;
+		 } 
+	}
 	
 	public void setName(String _name) { name = _name; }
 	

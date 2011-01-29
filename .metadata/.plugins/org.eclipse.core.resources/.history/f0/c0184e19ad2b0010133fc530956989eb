@@ -1,0 +1,10 @@
+package at.chainlet.rse.core;
+
+import static org.hamcrest.*;
+
+/**
+ * Testclass for the rudimentary stack environment VM.
+ */
+public class RudimentaryStackVM_Test {
+
+}
