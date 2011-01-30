@@ -1,0 +1,13 @@
+package at.chainlet.rse.core.utils;
+
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class StringSplitter_Test {
+	@Test
+	public void StringSplitter_ShouldReturnEmptyArrayOnNull() {
+		
+	}
+}

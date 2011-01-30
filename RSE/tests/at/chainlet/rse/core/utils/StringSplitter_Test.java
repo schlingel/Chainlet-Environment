@@ -1,0 +1,80 @@
+package at.chainlet.rse.core.utils;
+
+import static org.hamcrest.core.Is.*;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class StringSplitter_Test {
+	protected String spaceTestString1_WholeStringWithoutDelimiter = "PeterIsAFantasticCoderButHeIsKindOfADork";
+	
+	protected String spaceTestString2_SimpleCharsAndNumericsWithDelimiter = "Hello World is a classic and foremost number 1 example of 0815 coding starting examples";
+	
+	protected String[] spaceTestString2_Result = new String[] {
+			"Hello", "World", "is", "a", "classic", "and", "foremost", "number", "1", "example", "of", "0815", "coding", "starting", "examples"	
+	};
+	
+	protected String specialCharTestString3_ComplexSentenceWithDotAsDelimiter = "Peter, this bastard! He. He.gasp.he. how could he!.I just . I. I. just don't know.";
+	
+	protected String[] specialCharTestString3_Result = new String[] {
+			"Peter, this bastard! He", " He", "gasp", "he", " how could he!", "I just ", " I", " I", " just don't know"	
+	};
+	
+	protected String spaceTestString4_ContainsAllDelimiterSequenceLengthCases = "HELLO  WORLD     YOU'RE     PRETTY AWESOME!";
+	
+	protected String[] spaceTestString4_Result = new String[] {
+			"HELLO", " WORLD", "   ", "YOU'RE", "   ", "PRETTY", "AWESOME!"
+	};
+	
+	@Test
+	public void split_ShouldReturnEmptyArrayOnNull() {
+		String[] splittedValue = splitWithSpaceDelimiter(null);
+		assertNotNull(splittedValue);
+		assertThat(splittedValue.length, is(0));
+	}
+	
+	/**
+	 * Little help method to remove the calling code from the tests.
+	 */
+	private String[] splitWithSpaceDelimiter(String input) {
+		return splitWith(input, ' ');
+	}
+	
+	/**
+	 * Little help method to remove the calling code from the tests and
+	 * give the control of the delimiter char to the caller.
+	 */
+	private String[] splitWith(String input, char delimiter) {
+		StringSplitter sp = new StringSplitter(delimiter);
+		return sp.split(input);
+	}
+	
+	@Test
+	public void split_ShouldReturnArrayWithTheInputStringAsOnlyElement() {
+		String[] splittedValue = splitWithSpaceDelimiter(spaceTestString1_WholeStringWithoutDelimiter);
+		assertThat(splittedValue.length, is(1));
+		assertThat(splittedValue[0], is(spaceTestString1_WholeStringWithoutDelimiter));
+	}
+	
+	@Test
+	public void split_ShouldReturnArrayWithTheSplittedWords() {
+		String[] splittedValue = splitWithSpaceDelimiter(spaceTestString2_SimpleCharsAndNumericsWithDelimiter);
+		assertThat(splittedValue.length, is(spaceTestString2_Result.length));
+		assertThat(splittedValue, is(spaceTestString2_Result));
+	}
+	
+	@Test
+	public void split_ShouldReturnArrayWithTheSplittedWordsAndSpacesOnOtherDelimiterChar() {
+		String[] splittedValue = splitWith(specialCharTestString3_ComplexSentenceWithDotAsDelimiter, '.');
+		assertThat(splittedValue.length, is(specialCharTestString3_Result.length));
+		assertThat(splittedValue, is(specialCharTestString3_Result));
+	}
+	
+	@Test
+	public void split_ShouldReactProperToTheDifferentDelimiterSequencesLengths() {
+		String[] splittedValue = splitWithSpaceDelimiter(spaceTestString4_ContainsAllDelimiterSequenceLengthCases);
+		assertThat(splittedValue.length, is(spaceTestString4_Result.length));
+		assertThat(splittedValue, is(spaceTestString4_Result));
+	}
+}

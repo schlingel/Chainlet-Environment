@@ -1,0 +1,35 @@
+package at.chainlet.rse.core.utils;
+
+import static org.hamcrest.core.Is.*;
+import static org.hamcrest.core.IsNot.*;
+
+import org.hamcrest.core.IsNot;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class StringSplitter_Test {
+	protected String spaceTestString1_WholeStringWithoutDelimiter = "PeterIsAFantasticCoderButHeIsKindOfADork";
+	
+	@Test
+	public void StringSplitter_ShouldReturnEmptyArrayOnNull() {
+		StringSplitter sp = new StringSplitter();
+		String[] splittedValue = StringSplitter.split(null);
+		assertThat(splittedValue, is(not(null)));
+		assertThat(splittedValue.length, is(0));
+	}
+	
+	private void split(String input) {
+		
+	}
+	
+	private void splitWith(String input, delimiter) {
+		
+	}
+	
+	@Test
+	public void StringSplitter_ShouldReturnArrayWithTheInputStringAsOnlyElement() {
+		StringSplitter sp = new StringSplitter();
+		String[] splittedValue
+	}
+}

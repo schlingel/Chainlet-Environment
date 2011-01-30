@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package at.chainlet.rse.core.utils;
+
+/**
+ * @author zombie
+ *
+ */
+public class StringSplitter {
+
+}

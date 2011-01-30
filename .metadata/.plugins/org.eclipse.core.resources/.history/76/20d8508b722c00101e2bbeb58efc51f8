@@ -1,0 +1,5 @@
+package at.chainlet.rse.core.utils;
+
+public class StringSplitter_Test {
+
+}

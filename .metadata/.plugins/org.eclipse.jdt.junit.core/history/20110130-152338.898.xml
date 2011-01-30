@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="Rerun at.chainlet.rse.core.utils.StringSplitter_Test.split_ShouldReturnEmptyArrayOnNull" project="RSE" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="split_ShouldReturnEmptyArrayOnNull" classname="at.chainlet.rse.core.utils.StringSplitter_Test" time="0.007"/>
+</testrun>

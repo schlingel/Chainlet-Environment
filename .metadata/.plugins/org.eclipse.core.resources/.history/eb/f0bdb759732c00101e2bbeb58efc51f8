@@ -1,0 +1,21 @@
+package at.chainlet.rse.core.utils;
+
+import static org.hamcrest.core.Is.*;
+import static org.hamcrest.core.IsNot.*;
+
+import org.hamcrest.core.IsNot;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class StringSplitter_Test {
+	
+	
+	@Test
+	public void StringSplitter_ShouldReturnEmptyArrayOnNull() {
+		StringSplitter sp = new StringSplitter();
+		String[] splittedValue = StringSplitter.split(null);
+		assertThat(splittedValue, IsNot<String[]>(null));
+		assertThat(splittedValue.length, is(0));
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;at.chainlet.rse.core.utils&apos; to &apos;RSE/src&apos;&#x0D;&#x0A;- Original project: &apos;RSE&apos;&#x0D;&#x0A;- Destination element: &apos;RSE/src&apos;&#x0D;&#x0A;- Original element: &apos;RSE/tests/at.chainlet.rse.core.utils&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="/src" element1="/tests&lt;at.chainlet.rse.core.utils" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1296393096099" version="1.0"/>
+</session>

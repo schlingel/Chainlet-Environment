@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package at.chainlet.rse.core.utils;
+
+/**
+ * Little Util class for splitting Strings with given delimiters without deleting groups
+ * of the delimiter chars.
+ */
+public class StringSplitter {
+	/**
+	 * Contains the delimiter char.
+	 */
+	private char delimiter;
+}

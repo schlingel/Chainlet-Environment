@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package at.chainlet.rse.core.utils;
+
+/**
+ * <p>Little Util class for splitting Strings with given delimiters without deleting groups
+ * of the delimiter chars.</p>
+ * <p>This class is used in the parsing process @see  and has therefore some special characteristics.</p>
+ * <p>For example: Take this 
+ */
+public class StringSplitter {
+	/**
+	 * Contains the delimiter char.
+	 */
+	private char delimiter;
+	
+	/**
+	 * Initializes the StringSplitter with the given char as delimiter char.
+	 * @param delim
+	 */
+	public StringSplitter(char delim) {
+		delimiter = delim;
+	}
+	
+	/**
+	 * Initializes the StringSplitter with space as delimiter char.
+	 */
+	public StringSplitter() { this(' '); }
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public char getDelimiter() { return delimiter; }
+	
+	public String[] split(String input) {
+		return null;
+	}
+}

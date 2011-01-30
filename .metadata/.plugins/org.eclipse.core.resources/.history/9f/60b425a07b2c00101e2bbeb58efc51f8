@@ -1,0 +1,157 @@
+/**
+ * 
+ */
+package at.chainlet.rse.core.utils;
+
+import java.util.ArrayList;
+
+/**
+ * <p>Little Util class for splitting Strings with given delimiters without deleting groups
+ * of the delimiter chars.</p>
+ * <p>This class is used in the parsing process @see at.chainlet.rse.core.RudimentaryStackVM and has therefore some special characteristics.</p>
+ * <p>For example:</p>
+ * <pre>
+ *   "HELLO  WORLD     YOU'RE     PRETTY AWESOME!"
+ *    ----- ------ --- ------ --- ------ --------
+ * </pre>
+ * <p>As you see this input string returns 7 strings in the return value array which differ from
+ * the strings String.split would return. This behavior is important for working with input strings
+ * in the vm</p>
+ * <p>This string is splitted with the SPACE-char as delimiter. It has 3 cases which are showen in 
+ * this example:</p>
+ * <ul>
+ * <li>Normal case: There's onle one delimiter chars between two terms. (e.g. PRETTY AWESOME!)</li>
+ * <li>Special case 1: There are two delimiter chars between two terms. So the last delimiter char is added to the second term. (e.g. HELLO _WORLD)</li>
+ * <li>Special case 2: There are more than two delimiters between two terms. So the delimiter sequence is taken as term itself. But, the first and the last character of this sequence is removed. This chars are the delimiters after all. (e.g. WORLD ___ YOU'RE)</li>
+ * </ul>
+ * <p>
+ * This simple string splitter is in nature a automat.
+ * </p>
+ */
+public class StringSplitter {
+	/**
+	 * Contains the delimiter char.
+	 */
+	private char delimiter;
+	
+	/**
+	 * Contains the input which gets parsed next.
+	 */
+	private String inputForParsing;
+	
+	/**
+	 * Contains the allready extracted values from the inputForParsing string.
+	 */
+	private ArrayList<String> currentSplittedValues;
+	
+	/**
+	 * Initializes the StringSplitter with the given char as delimiter char.
+	 * @param delim
+	 */
+	public StringSplitter(char delim) {
+		delimiter = delim;
+		currentSplittedValues = new ArrayList<String>();
+		inputForParsing = "";
+	}
+	
+	/**
+	 * Initializes the StringSplitter with space as delimiter char.
+	 */
+	public StringSplitter() { this(' '); }
+	
+	/**
+	 * Gets the current set delimiter char.
+	 */
+	public char getDelimiter() { return delimiter; }
+	
+	/**
+	 * Sets the current delimiter char.
+	 * @param delim
+	 */
+	public void setDelimiter(char delim) { delimiter = delim; }
+	
+	public String[] splitWith(String input, char delimiterChar) {
+		setDelimiter(delimiterChar);
+		return split(input);
+	}
+	
+	public String[] split(String input) {
+		updateInnerAutomaton(input);
+		
+		while(inputForParsing.length() > 0) {
+			
+		}
+		
+		return (String[])currentSplittedValues.toArray(); // Java Generics, you suck!
+	}
+	
+	/**
+	 * Prepares the input to remove "danger" from the object. Makes it an empty string instead
+	 * of null and resets the existing list of the currentSplittedValues
+	 */
+	private void updateInnerAutomaton(String input) {
+		if(input == null)
+			input = "";
+		
+		currentSplittedValues.clear();
+		inputForParsing = input;
+	}
+	
+	/**
+	 * Parses the next term.
+	 */
+	private void parseNextTerm() {
+		if(inputForParsing.charAt(0) == delimiter) {
+			parseDelimiterSequence();
+		}
+		else {
+			parseNonDelimiterSequence();
+		}
+	}
+	
+	/**
+	 * Reads the input string as long as there are delimiter chars in a row. When the first
+	 * non delimiter is found it decides what happens next. (See the cases in the class doc.)
+	 */
+	private void parseDelimiterSequence() {
+		int i = 0;
+		for(; i < inputForParsing.length() && inputForParsing.charAt(i) == delimiter; i++);
+		
+		switch(i) {
+			case 1:
+				inputForParsing = inputForParsing.substring(1);
+				break;
+			case 2:
+				inputForParsing = inputForParsing.substring(1);
+				parseNonDelimiterSequence();
+				break;
+			default: // more than 2 delimiter chars in a row
+				currentSplittedValues.add(getDelimiterString(i - 2));
+				inputForParsing = inputForParsing.substring(i);
+				break;
+		}
+	}
+	
+	/**
+	 * Gets the next term from the input string and adds it to the term list.
+	 */
+	private void parseNonDelimiterSequence() {
+		// This way the method also works if the first char is an delimiter
+		// Wich is used in case 2 in parseDelmiterSequence method
+		do {
+			
+		}while();
+	}
+	
+	/**
+	 * Creates an delimiter string with the given length.
+	 */
+	private String getDelimiterString(int length) {
+		StringBuffer sb = new StringBuffer();
+		for(int i = 0; i < length; i++) {
+			sb.append(delimiter);
+		}
+		
+		return sb.toString();
+	}
+}
