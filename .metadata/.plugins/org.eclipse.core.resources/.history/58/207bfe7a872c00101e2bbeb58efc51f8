@@ -1,7 +1,7 @@
 package at.chainlet.rse.core;
 
 public class MockWord implements Word {
-	private int executionCounter = 0;
+	private static int executionCounter = 0;
 	
 	private WordStatusObserverExchanger exchanger;
 	

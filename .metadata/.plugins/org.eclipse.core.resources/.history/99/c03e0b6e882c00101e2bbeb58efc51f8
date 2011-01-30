@@ -19,7 +19,7 @@ public class RudimentaryStackVM_Test extends RSECoreTest {
 		MockWord w = (MockWord)getMockWord("test");
 		d.add(w);
 		RudimentaryStackVM vm = createDefaultVm(d);
-		vm.parse("test");
+		vm.parse("test1");
 		assertThat(w.getExecutionCounter(), is(1));
 	}
 	

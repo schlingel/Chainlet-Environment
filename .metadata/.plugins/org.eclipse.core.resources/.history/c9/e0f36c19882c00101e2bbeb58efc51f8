@@ -91,8 +91,7 @@ public class RudimentaryStackVM implements WordStatusObserver {
 		
 		// There's no interpreting loop because this is controlled by events.
 		// If the word thinks it's finished, it calls the interpreter which in return
-		// calls pollNextTerm see wordHasFinished and @see WordStatusObserver for 
-		// further details.
+		// calls pollNextTerm see wordHasFinished and @see 
 		pollNextTerm();
 	}
 	

@@ -88,13 +88,9 @@ public class RudimentaryStackVM implements WordStatusObserver {
 		for(String term : terms) {
 			termQueue.add(term);
 		}
-		
-		// There's no interpreting loop because this is controlled by events.
-		// If the word thinks it's finished, it calls the interpreter which in return
-		// calls pollNextTerm see wordHasFinished and @see WordStatusObserver for 
-		// further details.
-		pollNextTerm();
 	}
+	
+	private void 
 	
 	/**
 	 * The next term gets fetched if the term queue isn't empty and the VM
