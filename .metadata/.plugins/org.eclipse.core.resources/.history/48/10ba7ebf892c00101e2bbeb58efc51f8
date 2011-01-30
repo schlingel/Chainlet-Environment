@@ -1,0 +1,21 @@
+package at.chainlet.rse.core;
+
+/**
+ * <p>Simple interface for the value parsing unit in the VM.</p>
+ * <p>Through this interface it is easily possible to add new String parsing functionality to
+ * the interpreter. So it is possible that you create parser functionality for complex data types
+ * like vectors (e.g. 12;12;..;n e.g.) which gets an object representation and is put as object
+ * on the stack.</p>
+ * <p>This interface is also implemented by the basic type interpreters of the VM:</p>
+ * <ul>
+ * <li>Boolean types (true/false)</li>
+ * <li>Doubles (112.293)</li>
+ * <li>Integers (23433)</li>
+ * </ul>
+ * <p>Strings don't have this interpreters because they are the only built in type.</p>
+ */
+public interface ValueParser {
+	public boolean isParsable(String input);
+	
+	public Object getObjRepresentation()
+}

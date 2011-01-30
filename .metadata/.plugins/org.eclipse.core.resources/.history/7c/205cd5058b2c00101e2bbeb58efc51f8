@@ -1,0 +1,36 @@
+package at.chainlet.rse.core.stacktypes;
+
+import at.chainlet.rse.core.ValueParser;
+
+/**
+ * This class handles the parsing of boolean values within the VM. For further
+ * details @see at.chainlet.rse.core.ValueParser
+ */
+public class BooleanParser implements ValueParser {
+	/**
+	 * The String representation of true within this parser.
+	 */
+	public final String TRUE = "true";
+	
+	/**
+	 * The String representation of false within this parser
+	 */
+	public final String FALSE = "false";
+	
+	@Override
+	public boolean isParsable(String input) {
+		if(input.equalsIgnoreCase(TRUE) || input.equalsIgnoreCase(FALSE)) {
+			if(input.equalsIgnoreCase(TRUE))
+				return true;
+		}
+		
+		return false;
+	}
+
+	@Override
+	public Object getObjRepresentation(String input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

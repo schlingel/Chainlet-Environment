@@ -1,0 +1,7 @@
+package at.chainlet.rse.core.stacktypes;
+
+import at.chainlet.rse.core.ValueParser;
+
+public class DoubleParser implements ValueParser {
+	
+}

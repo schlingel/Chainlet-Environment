@@ -1,0 +1,5 @@
+package at.chainlet.rse.core.stacktypes;
+
+public class IntegerParser {
+
+}

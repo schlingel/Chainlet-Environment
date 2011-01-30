@@ -1,0 +1,23 @@
+package at.chainlet.rse.core.stacktypes;
+
+import at.chainlet.rse.core.ValueParser;
+
+/**
+ * This class handles the parsing of boolean values within the VM. For further
+ * details @see at.chainlet.rse.core.ValueParser
+ */
+public class BooleanParser implements ValueParser {
+
+	@Override
+	public boolean isParsable(String input) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object getObjRepresentation(String input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

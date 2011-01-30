@@ -1,0 +1,28 @@
+package at.chainlet.rse.core.stacktypes;
+
+import at.chainlet.rse.core.ValueParser;
+
+/**
+ * This class handles the parsing of Integer types.
+ */
+public class IntegerParser implements ValueParser {
+
+	@Override
+	public boolean isParsable(String input) {
+		try {
+			Integer.parseInt(input);
+			return true;
+		}
+		catch(NumberFormatException nfe) { return false; }
+	}
+
+	@Override
+	public Object getObjRepresentation(String input) {
+		try {
+			Integer value = new Integer(Integer.parseInt(input));
+			return value;
+		}
+		catch(NumberFormatException nfe) { return null; }
+	}
+	
+}

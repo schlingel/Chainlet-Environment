@@ -3,6 +3,9 @@ package at.chainlet.rse.core;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import at.chainlet.rse.core.stacktypes.BooleanParser;
+import at.chainlet.rse.core.stacktypes.DoubleParser;
+import at.chainlet.rse.core.stacktypes.IntegerParser;
 import at.chainlet.rse.core.utils.StringSplitter;
 
 /**
@@ -31,6 +34,8 @@ public class RudimentaryStackVM implements WordStatusObserver {
 	 */
 	private ConcurrentLinkedQueue<String> termQueue;
 	
+	private ArrayList<ValueParser> valueParsers;
+	
 	private StringSplitter termSplitter;
 	
 	/**
@@ -38,6 +43,7 @@ public class RudimentaryStackVM implements WordStatusObserver {
 	 */
 	public RudimentaryStackVM() {
 		initializeDataStructures();
+		initializeDefaultValueParsers();
 		termSplitter = new StringSplitter(' ');
 	}
 	
@@ -69,6 +75,13 @@ public class RudimentaryStackVM implements WordStatusObserver {
 		dataStack = new Stack<Object>();
 		termQueue = new ConcurrentLinkedQueue<String>();
 		library = new Library();
+		valueParsers = new ArrayList<ValueParser>();
+	}
+	
+	private void initializeDefaultValueParsers() {
+		valueParsers.add(new BooleanParser());
+		valueParsers.add(new IntegerParser());
+		valueParsers.add(new DoubleParser());
 	}
 
 	/**
@@ -106,10 +119,13 @@ public class RudimentaryStackVM implements WordStatusObserver {
 			String term = termQueue.poll();
 			
 			if(library.wordExists(term)) { 
+				// When the word finishs it calls wordFinished and this starts
+				// pollNextTerm automatically
 				runWord(library.getWord(term));
 			}
 			else { 
-				parseValueAndPutItOnStack(term); 
+				parseValueAndPutItOnStack(term);
+				pollNextTerm(); 
 			}
 		}
 	}
@@ -127,6 +143,7 @@ public class RudimentaryStackVM implements WordStatusObserver {
 	 * no converter for the given literal it is put as String on the stack.
 	 */
 	private void parseValueAndPutItOnStack(String name) {
-		throw new IllegalArgumentException();
+		
+		dataStack.add(name);
 	}
 }

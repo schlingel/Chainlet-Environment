@@ -1,0 +1,33 @@
+package at.chainlet.rse.core.stacktypes;
+
+import at.chainlet.rse.core.ValueParser;
+
+/**
+ * Handles the parsing of double values within the VM. For further details see
+ * @see at.chainlet.rse.core.ValueParser
+ * @author zombie
+ *
+ */
+public class DoubleParser implements ValueParser {
+
+	@Override
+	public boolean isParsable(String input) {
+		try {
+			Double.parseDouble(input);
+			return true;
+		}
+		catch(NumberFormatException nfe) {
+			return false;
+		}
+	}
+
+	@Override
+	public Object getObjRepresentation(String input) {
+		try {
+			return new Double(Double.parseDouble(input));
+		}
+		catch(NumberFormatException nfe) {
+			return null;
+		}
+	}
+}

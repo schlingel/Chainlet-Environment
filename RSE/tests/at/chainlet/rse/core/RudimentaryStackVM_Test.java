@@ -2,8 +2,6 @@ package at.chainlet.rse.core;
 
 import static org.hamcrest.core.Is.is;
 
-import java.util.concurrent.ConcurrentLinkedQueue;
-
 import org.junit.Test;
 
 import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
@@ -21,26 +19,6 @@ public class RudimentaryStackVM_Test extends RSECoreTest {
 		RudimentaryStackVM vm = createDefaultVm(d);
 		vm.parse("test");
 		assertThat(w.getExecutionCounter(), is(1));
-	}
-	
-	@Test
-	public void parse_ShouldSplitTheStringBySpacesAndPutThemAsSingleTermsInTheTermQueue() {
-		RudimentaryStackVM vm = createDefaultVm(null);
-		StringBuffer sb = new StringBuffer();
-		String[] entries = new String[] { "123", "#as", "649", "asdf", "fdas.*", "asdf:", "§=)(", "!", "?=)(ß0}[]}", "}[[#+", "   " };
-		for(String entry : entries) {
-			sb.append(entry);
-			sb.append(" ");
-		}
-		
-		vm.parse(sb.toString());
-		ConcurrentLinkedQueue<String> terms = vm.getTermQueue();
-		
-		for(int i = 0; i < entries.length; i++) {
-			String term = entries[i];
-			assertThat(terms.poll(), is(term));
-		}
-		
 	}
 	
 	/**

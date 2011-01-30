@@ -1,0 +1,19 @@
+package at.chainlet.rse.core.stacktypes;
+
+import at.chainlet.rse.core.ValueParser;
+
+public class DoubleParser implements ValueParser {
+
+	@Override
+	public boolean isParsable(String input) {
+		Double.parseDouble(input);
+		return false;
+	}
+
+	@Override
+	public Object getObjRepresentation(String input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

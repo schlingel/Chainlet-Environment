@@ -1,0 +1,10 @@
+package at.chainlet.rse.core.stacktypes;
+
+import at.chainlet.rse.core.ValueParser;
+
+/**
+ * This class handles the parsing of Integer types.
+ */
+public class IntegerParser implements ValueParser {
+
+}

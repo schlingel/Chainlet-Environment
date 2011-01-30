@@ -1,0 +1,10 @@
+package at.chainlet.rse.core.stacktypes;
+
+/**
+ * 
+ * @author zombie
+ *
+ */
+public class IntegerParser {
+
+}
