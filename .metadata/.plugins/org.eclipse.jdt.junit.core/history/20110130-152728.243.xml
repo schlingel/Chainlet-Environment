@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="StringSplitter_Test" project="RSE" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="at.chainlet.rse.core.utils.StringSplitter_Test" time="0.006">
+    <testcase name="split_ShouldReturnEmptyArrayOnNull" classname="at.chainlet.rse.core.utils.StringSplitter_Test" time="0.004"/>
+    <testcase name="split_ShouldReturnArrayWithTheInputStringAsOnlyElement" classname="at.chainlet.rse.core.utils.StringSplitter_Test" time="0.0"/>
+    <testcase name="split_ShouldReturnArrayWithTheSplittedWords" classname="at.chainlet.rse.core.utils.StringSplitter_Test" time="0.001"/>
+    <testcase name="split_ShouldReturnArrayWithTheSplittedWordsAndSpacesOnOtherDelimiterChar" classname="at.chainlet.rse.core.utils.StringSplitter_Test" time="0.0"/>
+    <testcase name="split_ShouldReactProperToTheDifferentDelimiterSequencesLengths" classname="at.chainlet.rse.core.utils.StringSplitter_Test" time="0.001"/>
+  </testsuite>
+</testrun>

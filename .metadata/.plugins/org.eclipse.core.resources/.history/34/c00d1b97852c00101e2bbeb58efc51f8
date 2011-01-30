@@ -3,8 +3,6 @@ package at.chainlet.rse.core;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import at.chainlet.rse.core.utils.StringSplitter;
-
 /**
  * This is the core of the RSE system. It contains the logic for managing and starting
  * words and contains the shared stacks.
@@ -31,14 +29,11 @@ public class RudimentaryStackVM implements WordStatusObserver {
 	 */
 	private ConcurrentLinkedQueue<String> termQueue;
 	
-	private StringSplitter termSplitter;
-	
 	/**
 	 * Initializes the VM.
 	 */
 	public RudimentaryStackVM() {
 		initializeDataStructures();
-		termSplitter = new StringSplitter(' ');
 	}
 	
 	/**
@@ -83,11 +78,18 @@ public class RudimentaryStackVM implements WordStatusObserver {
 	 * Splits the input string and enqueues them in the term queue.
 	 */
 	public void parse(String input) {
-		String terms[] = termSplitter.split(input);
+		String terms[] = split(input);
 		
 		for(String term : terms) {
 			termQueue.add(term);
 		}
+	}
+	
+	/**
+	 * Splits the String by the delimiter char space
+	 */
+	private String[] split(String input) {
+		return input.split(" ");
 	}
 	
 	/**
