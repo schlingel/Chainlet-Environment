@@ -20,8 +20,15 @@
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.RSECoreTest"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Dictionary"/>
-<fullyQualifiedTypeName name="at.chainlet.rse.core.RudimentaryStackVM"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentLinkedQueue"/>
+<fullyQualifiedTypeName name="org.hamcrest.core.IsNot"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.RudimentaryStackVM"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.utils.StringSplitter"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.ValueParser"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.stacktypes.BooleanParser"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.stacktypes.DoubleParser"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.stacktypes.IntegerParser"/>
 </qualifiedTypeNameHistroy>

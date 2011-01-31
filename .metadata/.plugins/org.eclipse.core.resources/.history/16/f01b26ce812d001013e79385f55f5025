@@ -49,7 +49,7 @@ public class StringSplitter_Test {
 	 */
 	private String[] splitWith(String input, char delimiter) {
 		splitter.setDelimiter(delimiter);
-		return splitter.split(input);
+		return sp.split(input);
 	}
 	
 	@Test

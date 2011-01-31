@@ -7,8 +7,6 @@ import static org.junit.Assert.*;
 
 
 public class StringSplitter_Test {
-	private StringSplitter splitter = new StringSplitter(' ');
-	
 	protected String spaceTestString1_WholeStringWithoutDelimiter = "PeterIsAFantasticCoderButHeIsKindOfADork";
 	
 	protected String spaceTestString2_SimpleCharsAndNumericsWithDelimiter = "Hello World is a classic and foremost number 1 example of 0815 coding starting examples";
@@ -48,8 +46,8 @@ public class StringSplitter_Test {
 	 * give the control of the delimiter char to the caller.
 	 */
 	private String[] splitWith(String input, char delimiter) {
-		splitter.setDelimiter(delimiter);
-		return splitter.split(input);
+		StringSplitter sp = new StringSplitter(delimiter);
+		return sp.split(input);
 	}
 	
 	@Test

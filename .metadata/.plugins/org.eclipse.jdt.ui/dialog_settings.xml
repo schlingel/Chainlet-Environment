@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="500" key="CallHierarchyViewPart.ratio3"/>
+	<item value="500" key="CallHierarchyViewPart.ratio1"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
+	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
 	<item value="2" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
+	<item value="2" key="CallHierarchyViewPart.field_mode"/>
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
 	<item value="JavaSE-1.6" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
@@ -20,13 +28,15 @@
 		<item value="400" key="height"/>
 		<item value="600" key="width"/>
 	</section>
-	<section name="RenameInformationPopup">
-	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
-		<item value="*" key="patterns"/>
 		<item value="false" key="updateQualifiedNames"/>
+		<item value="*" key="patterns"/>
 		<item value="1" key="updateSimilarElementsMatchStrategy"/>
 		<item value="false" key="updateTextualMatches"/>
 		<item value="false" key="updateSimilarElements"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="CallHierarchySearchScope">
 	</section>
 </section>

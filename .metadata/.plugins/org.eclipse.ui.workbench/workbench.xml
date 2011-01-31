@@ -4,7 +4,7 @@
 <window height="768" maximized="true" width="1024" x="125" y="2">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
-<itemSize x="160"/>
+<itemSize x="357"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
@@ -22,7 +22,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -54,6 +54,12 @@
 <part id="17"/>
 <part id="18"/>
 <part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
 </presentation>
 </folder>
 </info>
@@ -72,11 +78,11 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RudimentaryStackVM.java" partName="RudimentaryStackVM.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/RudimentaryStackVM.java" title="RudimentaryStackVM.java" tooltip="RSE/src/at/chainlet/rse/core/RudimentaryStackVM.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/RudimentaryStackVM.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1885" selectionTopPixel="1020"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3422" selectionTopPixel="1360"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Library.java" partName="Library.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/Library.java" title="Library.java" tooltip="RSE/src/at/chainlet/rse/core/Library.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/Library.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2753" selectionTopPixel="1207"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dictionary.java" partName="Dictionary.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/Dictionary.java" title="Dictionary.java" tooltip="RSE/src/at/chainlet/rse/core/Dictionary.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/Dictionary.java"/>
@@ -92,7 +98,7 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MockWord.java" partName="MockWord.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/MockWord.java" title="MockWord.java" tooltip="RSE/tests/at/chainlet/rse/core/MockWord.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/tests/at/chainlet/rse/core/MockWord.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="19" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="410" selectionTopPixel="285"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Library_Tests.java" partName="Library_Tests.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/Library_Tests.java" title="Library_Tests.java" tooltip="RSE/tests/at/chainlet/rse/core/Library_Tests.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/tests/at/chainlet/rse/core/Library_Tests.java"/>
@@ -108,7 +114,7 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JournalingWordList.java" partName="JournalingWordList.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/JournalingWordList.java" title="JournalingWordList.java" tooltip="RSE/src/at/chainlet/rse/core/JournalingWordList.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/JournalingWordList.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="313" selectionTopPixel="541"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="313" selectionTopPixel="1577"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JournalingWordList_Test.java" partName="JournalingWordList_Test.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/JournalingWordList_Test.java" title="JournalingWordList_Test.java" tooltip="RSE/tests/at/chainlet/rse/core/JournalingWordList_Test.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/tests/at/chainlet/rse/core/JournalingWordList_Test.java"/>
@@ -124,24 +130,51 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WordStatusObserverExchanger_Test.java" partName="WordStatusObserverExchanger_Test.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/WordStatusObserverExchanger_Test.java" title="WordStatusObserverExchanger_Test.java" tooltip="RSE/tests/at/chainlet/rse/core/WordStatusObserverExchanger_Test.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/tests/at/chainlet/rse/core/WordStatusObserverExchanger_Test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2341" selectionTopPixel="1088"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2341" selectionTopPixel="1067"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MockWordStatusObserver.java" partName="MockWordStatusObserver.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/MockWordStatusObserver.java" title="MockWordStatusObserver.java" tooltip="RSE/tests/at/chainlet/rse/core/MockWordStatusObserver.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MockWordStatusObserver.java" partName="MockWordStatusObserver.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/MockWordStatusObserver.java" title="MockWordStatusObserver.java" tooltip="RSE/tests/at/chainlet/rse/core/MockWordStatusObserver.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/tests/at/chainlet/rse/core/MockWordStatusObserver.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="478" selectionTopPixel="19"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RudimentaryStackVM_Test.java" partName="RudimentaryStackVM_Test.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/RudimentaryStackVM_Test.java" title="RudimentaryStackVM_Test.java" tooltip="RSE/tests/at/chainlet/rse/core/RudimentaryStackVM_Test.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RudimentaryStackVM_Test.java" partName="RudimentaryStackVM_Test.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/RudimentaryStackVM_Test.java" title="RudimentaryStackVM_Test.java" tooltip="RSE/tests/at/chainlet/rse/core/RudimentaryStackVM_Test.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/tests/at/chainlet/rse/core/RudimentaryStackVM_Test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1579" selectionTopPixel="238"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="202" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ConcurrentLinkedQueue.class" partName="ConcurrentLinkedQueue.class" title="ConcurrentLinkedQueue.class" tooltip="java.util.concurrent.ConcurrentLinkedQueue" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=RSE/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.util.concurrent(ConcurrentLinkedQueue.class"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StringSplitter.java" partName="StringSplitter.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/utils/StringSplitter.java" title="StringSplitter.java" tooltip="RSE/src/at/chainlet/rse/core/utils/StringSplitter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/utils/StringSplitter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="856" selectionTopPixel="13"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StringSplitter_Test.java" partName="StringSplitter_Test.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/tests/at/chainlet/rse/core/utils/StringSplitter_Test.java" title="StringSplitter_Test.java" tooltip="RSE/tests/at/chainlet/rse/core/utils/StringSplitter_Test.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/tests/at/chainlet/rse/core/utils/StringSplitter_Test.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2281" selectionTopPixel="714"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ValueParser.java" partName="ValueParser.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/ValueParser.java" title="ValueParser.java" tooltip="RSE/src/at/chainlet/rse/core/ValueParser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/ValueParser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="736" selectionTopPixel="34"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IntegerParser.java" partName="IntegerParser.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/stacktypes/IntegerParser.java" title="IntegerParser.java" tooltip="RSE/src/at/chainlet/rse/core/stacktypes/IntegerParser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/stacktypes/IntegerParser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="676" selectionTopPixel="149"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BooleanParser.java" partName="BooleanParser.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/stacktypes/BooleanParser.java" title="BooleanParser.java" tooltip="RSE/src/at/chainlet/rse/core/stacktypes/BooleanParser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/stacktypes/BooleanParser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="638" selectionTopPixel="234"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DoubleParser.java" partName="DoubleParser.java" path="C:/Users/zombie/Documents/Projects/chainlet/RSE/src/at/chainlet/rse/core/stacktypes/DoubleParser.java" title="DoubleParser.java" tooltip="RSE/src/at/chainlet/rse/core/stacktypes/DoubleParser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RSE/src/at/chainlet/rse/core/stacktypes/DoubleParser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="655" selectionTopPixel="183"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
-<viewState failuresOnly="false" layout="1" orientation="2" ratio="499" scroll="false" time="true"/>
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="497" scroll="false" time="true"/>
+</view>
+<view id="org.eclipse.jdt.callhierarchy.view" partName="Call Hierarchy">
+<viewState search_scope_type="1"/>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
@@ -181,8 +214,9 @@
 <view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
+<expanded>
 <category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -249,7 +283,7 @@
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -426,6 +460,7 @@
 <view id="org.eclipse.jdt.junit.ResultView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -451,8 +486,8 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.38484251" ratioLeft="391" ratioRight="625" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.6057402" ratioLeft="401" ratioRight="261" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.jdt.junit.ResultView" appearance="2" expanded="2">
+<info folder="true" part="bottom" ratio="0.6148036" ratioLeft="407" ratioRight="255" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
@@ -461,6 +496,7 @@
 <page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -473,6 +509,7 @@
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
@@ -533,22 +570,31 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.673716" ratioLeft="446" ratioRight="216" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.673716" ratioLeft="446" ratioRight="216" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
@@ -557,24 +603,31 @@
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
 <page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.4497992" ratioLeft="224" ratioRight="274" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -586,161 +639,172 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/RudimentaryStackVM.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/tests/at/chainlet/rse/core/RudimentaryStackVM_Test.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/tests/at/chainlet/rse/core/Library_Tests.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=RSE/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.util.concurrent(ConcurrentLinkedQueue.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/tests/at/chainlet/rse/core/MockWordStatusObserver.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/utils/StringSplitter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/RudimentaryStackVM.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=RSE/lib\/junit.jar&lt;org.junit.internal.runners.model(ReflectiveCallable.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/Library.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/ValueParser.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/stacktypes/IntegerParser.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/stacktypes/BooleanParser.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/stacktypes/DoubleParser.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/SystemWord.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/SimpleWord.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/WordStatusObserver.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/WordStatusObserverExchanger.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/src/at/chainlet/rse/core/JournalingWordList.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/tests/at/chainlet/rse/core/WordStatusObserverExchanger_Test.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RSE/tests/at/chainlet/rse/core/RSECoreTest.java"/>
 </editors>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2579" y="0"/>
 </item>
-<item historyLabel="Library_Tests.java" index="2">
-<position info="not_deleted" x="33" y="192"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2836" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1554" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="7" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="1106" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="1083" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="2401" y="1"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="2408" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="2443" y="1"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="2450" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="1585" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="378" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="641" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="1585" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="1919" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="641" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="775" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="828" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="999" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="880" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="903" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1295" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1287" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1290" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1303" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="617" y="2"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="673" y="0"/>
-</item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1274" y="0"/>
-</item>
-<item historyLabel="ConcurrentLinkedQueue.class" index="3">
+<item historyLabel="ReflectiveCallable.class" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1093" y="0"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="3164" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1074" y="0"/>
+<item historyLabel="Library.java" index="4">
+<position info="not_deleted" x="8" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="703" y="71"/>
+<item historyLabel="Library.java" index="4">
+<position info="not_deleted" x="2753" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1295" y="0"/>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position info="not_deleted" x="351" y="53"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1094" y="0"/>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position info="not_deleted" x="576" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="1826" y="5"/>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position info="not_deleted" x="605" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="2033" y="0"/>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position info="not_deleted" x="933" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="2084" y="0"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="3824" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
+<item historyLabel="ValueParser.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ValueParser.java" index="5">
+<position info="not_deleted" x="968" y="0"/>
+</item>
+<item historyLabel="IntegerParser.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="IntegerParser.java" index="6">
+<position info="not_deleted" x="676" y="0"/>
+</item>
+<item historyLabel="BooleanParser.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BooleanParser.java" index="7">
+<position info="not_deleted" x="634" y="0"/>
+</item>
+<item historyLabel="DoubleParser.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DoubleParser.java" index="8">
+<position info="not_deleted" x="655" y="0"/>
+</item>
+<item historyLabel="StringSplitter.java" index="1">
+<position info="not_deleted" x="856" y="0"/>
+</item>
+<item historyLabel="BooleanParser.java" index="7">
+<position info="not_deleted" x="634" y="0"/>
+</item>
+<item historyLabel="SystemWord.java" index="9">
+<position info="not_deleted" x="33" y="0"/>
+</item>
+<item historyLabel="SimpleWord.java" index="10">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="3824" y="0"/>
+</item>
+<item historyLabel="WordStatusObserver.java" index="11">
+<position info="not_deleted" x="36" y="0"/>
+</item>
+<item historyLabel="WordStatusObserverExchanger.java" index="12">
+<position info="not_deleted" x="29" y="0"/>
+</item>
+<item historyLabel="JournalingWordList.java" index="13">
+<position info="not_deleted" x="313" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="3824" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="1187" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="1808" y="24"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2091" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2216" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="3857" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
 <position/>
 </item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
 <position/>
 </item>
-<item historyLabel="RudimentaryStackVM.java" index="0">
-<position info="not_deleted" x="1885" y="0"/>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position info="not_deleted" x="351" y="53"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1094" y="0"/>
+<item historyLabel="StringSplitter.java" index="1">
+<position info="not_deleted" x="856" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="673" y="2"/>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1252" y="40"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2836" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="673" y="0"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2853" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="405" y="53"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="3434" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="673" y="0"/>
+<item historyLabel="WordStatusObserverExchanger_Test.java" index="14">
+<position info="not_deleted" x="2341" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="643" y="32"/>
+<item historyLabel="RSECoreTest.java" index="15">
+<position info="not_deleted" x="298" y="0"/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="1252" y="40"/>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position/>
 </item>
-<item historyLabel="RudimentaryStackVM_Test.java" index="1">
-<position info="not_deleted" x="643" y="32"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2443" y="5"/>
 </item>
-<item active="true" historyLabel="MockWordStatusObserver.java" index="4">
-<position info="not_deleted" x="382" y="0"/>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="2846" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM.java" index="2">
+<position info="not_deleted" x="3422" y="0"/>
+</item>
+<item historyLabel="StringSplitter.java" index="1">
+<position info="not_deleted" x="856" y="0"/>
+</item>
+<item historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position info="not_deleted" x="713" y="0"/>
+</item>
+<item active="true" historyLabel="RudimentaryStackVM_Test.java" index="0">
+<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -759,6 +823,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DoubleParser.java" tooltip="RSE/src/at/chainlet/rse/core/stacktypes/DoubleParser.java">
+<persistable path="/RSE/src/at/chainlet/rse/core/stacktypes/DoubleParser.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BooleanParser.java" tooltip="RSE/src/at/chainlet/rse/core/stacktypes/BooleanParser.java">
+<persistable path="/RSE/src/at/chainlet/rse/core/stacktypes/BooleanParser.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IntegerParser.java" tooltip="RSE/src/at/chainlet/rse/core/stacktypes/IntegerParser.java">
+<persistable path="/RSE/src/at/chainlet/rse/core/stacktypes/IntegerParser.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ValueParser.java" tooltip="RSE/src/at/chainlet/rse/core/ValueParser.java">
+<persistable path="/RSE/src/at/chainlet/rse/core/ValueParser.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ReflectiveCallable.class" tooltip="org.junit.internal.runners.model.ReflectiveCallable">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=RSE/lib\/junit.jar&lt;org.junit.internal.runners.model(ReflectiveCallable.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StringSplitter_Test.java" tooltip="RSE/tests/at/chainlet/rse/core/utils/StringSplitter_Test.java">
+<persistable path="/RSE/tests/at/chainlet/rse/core/utils/StringSplitter_Test.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StringSplitter.java" tooltip="RSE/tests/at/chainlet/rse/core/utils/StringSplitter.java">
+<persistable path="/RSE/tests/at/chainlet/rse/core/utils/StringSplitter.java"/>
+</file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ConcurrentLinkedQueue.class" tooltip="java.util.concurrent.ConcurrentLinkedQueue">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=RSE/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.util.concurrent(ConcurrentLinkedQueue.class"/>
 </file>
@@ -782,27 +867,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HistorizedWordList.java" tooltip="RSE/src/at/chainlet/rse/core/datastructures/HistorizedWordList.java">
 <persistable path="/RSE/src/at/chainlet/rse/core/datastructures/HistorizedWordList.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HashMap.class" tooltip="java.util.HashMap">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=RSE/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.util(HashMap.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="plugin.properties" tooltip="RSE/lib/plugin.properties">
-<persistable path="/RSE/lib/plugin.properties"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RSECoreTest.java" tooltip="RSE/tests/at/chainlet/rse/core/RSECoreTest.java">
-<persistable path="/RSE/tests/at/chainlet/rse/core/RSECoreTest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RSEInvalidActionException.java" tooltip="RSE/src/at/chainlet/rse/core/exceptions/RSEInvalidActionException.java">
-<persistable path="/RSE/src/at/chainlet/rse/core/exceptions/RSEInvalidActionException.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Library_Tests.java" tooltip="RSE/tests/at/chainlet/rse/core/Library_Tests.java">
-<persistable path="/RSE/tests/at/chainlet/rse/core/Library_Tests.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MockWords.java" tooltip="RSE/tests/at/chainlet/rse/core/MockWords.java">
-<persistable path="/RSE/tests/at/chainlet/rse/core/MockWords.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Dictionary_Tests.java" tooltip="RSE/tests/at/chainlet/rse/core/Dictionary_Tests.java">
-<persistable path="/RSE/tests/at/chainlet/rse/core/Dictionary_Tests.java"/>
 </file>
 </mruList>
 </workbench>
