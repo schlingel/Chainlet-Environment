@@ -23,7 +23,7 @@ public class BooleanParser implements ValueParser {
 	}
 
 	@Override
-	public Object getObjRepresentation(String input) {
+	public Object convert(String input) {
 		if(isParsable(input)) {
 			return new Boolean(input.equalsIgnoreCase(TRUE));
 		}

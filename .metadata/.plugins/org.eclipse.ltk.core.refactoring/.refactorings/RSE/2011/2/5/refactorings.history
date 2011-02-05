@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;at.chainlet.rse.core.ValueParser.getObjRepresentation(...)&apos; to &apos;convert&apos;&#x0D;&#x0A;- Original project: &apos;RSE&apos;&#x0D;&#x0A;- Original element: &apos;at.chainlet.rse.core.ValueParser.getObjRepresentation(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;at.chainlet.rse.core.ValueParser.convert(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;getObjRepresentation&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;at.chainlet.rse.core{ValueParser.java[ValueParser~getObjRepresentation~QString;" name="convert" references="true" stamp="1296900675967" version="1.0"/>
+</session>

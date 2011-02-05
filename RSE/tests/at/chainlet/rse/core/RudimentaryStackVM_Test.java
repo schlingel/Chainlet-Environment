@@ -12,12 +12,12 @@ import static org.junit.Assert.*;
  */
 public class RudimentaryStackVM_Test extends RSECoreTest {
 	@Test
-	public void pollNextTerm_ShouldExecuteTermAsWordIfItsInTheLibrary() throws RSEInvalidStateException {
+	public void pollNextTerm_ShouldExecuteTermAsWordWhenItsInTheLibrary() throws RSEInvalidStateException {
 		Dictionary d = getMockDict("test1");
 		MockWord w = (MockWord)getMockWord("test");
 		d.add(w);
 		RudimentaryStackVM vm = createDefaultVm(d);
-		vm.parse("test");
+		vm.interpret("test");
 		assertThat(w.getExecutionCounter(), is(1));
 	}
 	
@@ -30,5 +30,28 @@ public class RudimentaryStackVM_Test extends RSECoreTest {
 			vm.getLibrary().add(dic);
 
 		return vm;
+	}
+	
+	@Test
+	public void parse_ShouldCreateATermQueueFromTheGivenInput() throws RSEInvalidStateException {
+		Dictionary dic = getMockDict("test");
+		RudimentaryStackVM vm = createDefaultVm(dic);
+		
+		vm.parse(getMockScriptWithGivenChars(20));
+		assertNotNull(vm.getTermQueue());
+		assertThat(vm.getTermQueue().size(), is(20));
+	}
+	
+	private String getMockScriptWithGivenChars(int number) {
+		if(number < 0)
+			number = 0;
+		
+		StringBuffer sb = new StringBuffer();
+		for(int i = 0; i < number; i++) {
+			sb.append("term" + i);
+			sb.append(" ");
+		}
+		
+		return sb.toString();
 	}
 }

@@ -23,5 +23,5 @@ public interface ValueParser {
 	/**
 	 * If the given input is parsable it returns the object representation.
 	 */
-	public Object getObjRepresentation(String input);
+	public Object convert(String input);
 }

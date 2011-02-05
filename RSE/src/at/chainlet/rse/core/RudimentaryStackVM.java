@@ -93,6 +93,17 @@ public class RudimentaryStackVM implements WordStatusObserver {
 	}
 	
 	/**
+	 * Parses the given input and starts interpreting the terms in the term queue.
+	 */
+	public void interpret(String input) {
+		if(input == null)
+			input = "";
+		
+		parse(input);
+		pollNextTerm();
+	}
+	
+	/**
 	 * Splits the input string and enqueues them in the term queue.
 	 */
 	public void parse(String input) {
@@ -101,12 +112,6 @@ public class RudimentaryStackVM implements WordStatusObserver {
 		for(String term : terms) {
 			termQueue.add(term);
 		}
-		
-		// There's no interpreting loop because this is controlled by events.
-		// If the word thinks it's finished, it calls the interpreter which in return
-		// calls pollNextTerm see wordHasFinished and @see WordStatusObserver for 
-		// further details.
-		pollNextTerm();
 	}
 	
 	/**
@@ -143,6 +148,12 @@ public class RudimentaryStackVM implements WordStatusObserver {
 	 * no converter for the given literal it is put as String on the stack.
 	 */
 	private void parseValueAndPutItOnStack(String name) {
+		for(ValueParser parser : valueParsers) {
+			if(parser.isParsable(name)) {
+				dataStack.add(parser.convert(name));
+				return;
+			}
+		}
 		
 		dataStack.add(name);
 	}

@@ -18,7 +18,7 @@ public class IntegerParser implements ValueParser {
 	}
 
 	@Override
-	public Object getObjRepresentation(String input) {
+	public Object convert(String input) {
 		try {
 			Integer value = new Integer(Integer.parseInt(input));
 			return value;

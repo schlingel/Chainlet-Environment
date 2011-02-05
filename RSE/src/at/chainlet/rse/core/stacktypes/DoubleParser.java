@@ -20,7 +20,7 @@ public class DoubleParser implements ValueParser {
 	}
 
 	@Override
-	public Object getObjRepresentation(String input) {
+	public Object convert(String input) {
 		try {
 			return new Double(Double.parseDouble(input));
 		}
