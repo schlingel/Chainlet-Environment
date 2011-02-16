@@ -4,6 +4,7 @@ import static org.hamcrest.core.Is.is;
 
 import org.junit.Test;
 
+import at.chainlet.rse.RudimentaryStackVM;
 import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
 import static org.junit.Assert.*;
 
@@ -16,7 +17,7 @@ public class RudimentaryStackVM_Test extends RSECoreTest {
 		Dictionary d = getMockDict("test1");
 		MockWord w = (MockWord)getMockWord("test");
 		d.add(w);
-		RudimentaryStackVM vm = createDefaultVm(d);
+		StackVM vm = createDefaultVm(d);
 		vm.interpret("test");
 		assertThat(w.getExecutionCounter(), is(1));
 	}
@@ -24,8 +25,8 @@ public class RudimentaryStackVM_Test extends RSECoreTest {
 	/**
 	 * Creates a new stack VM with the given words in the given library.
 	 */
-	private RudimentaryStackVM createDefaultVm(Dictionary dic) {
-		RudimentaryStackVM vm = new RudimentaryStackVM();
+	private StackVM createDefaultVm(Dictionary dic) {
+		StackVM vm = new RudimentaryStackVM();
 		if(dic != null)
 			vm.getLibrary().add(dic);
 
@@ -35,7 +36,7 @@ public class RudimentaryStackVM_Test extends RSECoreTest {
 	@Test
 	public void parse_ShouldCreateATermQueueFromTheGivenInput() throws RSEInvalidStateException {
 		Dictionary dic = getMockDict("test");
-		RudimentaryStackVM vm = createDefaultVm(dic);
+		StackVM vm = createDefaultVm(dic);
 		
 		vm.parse(getMockScriptWithGivenChars(20));
 		assertNotNull(vm.getTermQueue());

@@ -1,5 +1,7 @@
 package at.chainlet.rse.core;
 
+import at.chainlet.rse.WordStatusObserverExchanger;
+
 public abstract class RSECoreTest {
 	private static int dictCount = 0;
 	

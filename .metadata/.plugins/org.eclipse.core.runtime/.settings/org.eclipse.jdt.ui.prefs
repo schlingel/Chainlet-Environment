@@ -1,4 +1,4 @@
-#Sun Jan 30 22:23:57 CET 2011
+#Thu Feb 10 11:44:02 CET 2011
 sp_cleanup.remove_unnecessary_casts=true
 sp_cleanup.remove_trailing_whitespaces_ignore_empty=false
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
@@ -57,7 +57,7 @@ hoverModifierMasks=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.
 sp_cleanup.qualify_static_member_accesses_through_subtypes_with_declaring_class=true
 content_assist_proposals_background=255,255,255
 sp_cleanup.add_missing_nls_tags=false
-content_assist_number_of_computers=19
+content_assist_number_of_computers=20
 sp_cleanup.always_use_blocks=true
 org.eclipse.jdt.ui.formatterprofiles.version=11
 sp_cleanup.remove_trailing_whitespaces=false

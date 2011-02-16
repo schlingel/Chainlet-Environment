@@ -1,5 +1,7 @@
 package at.chainlet.rse.core;
 
+import at.chainlet.rse.WordStatusObserverExchanger;
+
 public class MockWord implements Word {
 	private int executionCounter = 0;
 	
@@ -26,7 +28,7 @@ public class MockWord implements Word {
 	public void setName(String _name) { name = _name; }
 	
 	@Override
-	public void registerVM(RudimentaryStackVM vm) { }
+	public void registerVM(StackVM vm) { }
 	
 	public void setObserverExchanger(WordStatusObserverExchanger ex) { 
 		exchanger = ex;
