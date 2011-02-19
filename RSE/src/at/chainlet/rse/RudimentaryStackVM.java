@@ -178,4 +178,15 @@ public class RudimentaryStackVM implements StackVM {
 		
 		outputDevices.add(device);
 	}
+	
+	/**
+	 * Gets the list of the output devices.
+	 */
+	@Override
+	public OutputDevice[] getOutputDevices() {
+		if(outputDevices == null)
+			return new OutputDevice[0];
+		
+		return outputDevices.toArray(new OutputDevice[0]);
+	}
 }
