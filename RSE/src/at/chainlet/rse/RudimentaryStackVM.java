@@ -33,7 +33,16 @@ public class RudimentaryStackVM implements StackVM {
 	 */
 	private ConcurrentLinkedQueue<String> termQueue;
 	
+	/**
+	 * Contains the value parsers.
+	 */
 	private ArrayList<ValueParser> valueParsers;
+	
+	/**
+	 * Contains the list of the output devices. Every device gets the output string when
+	 * a word prints to the output.
+	 */
+	private ArrayList<OutputDevice> outputDevices;
 	
 	private StringSplitter termSplitter;
 	
@@ -160,5 +169,13 @@ public class RudimentaryStackVM implements StackVM {
 		}
 		
 		dataStack.add(name);
+	}
+	
+	@Override
+	public void addOutputDevice(OutputDevice device) {
+		if(device == null)
+			throw new IllegalArgumentException("Output devices must not be null!");
+		
+		outputDevices.add(device);
 	}
 }
