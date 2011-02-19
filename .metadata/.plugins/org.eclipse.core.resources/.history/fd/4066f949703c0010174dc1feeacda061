@@ -1,0 +1,12 @@
+package at.chainlet.rse.plugin;
+
+/**
+ * <p>This class handles the instancing and loading of RSE plugin jars.</p>
+ * <ol>
+ * <li>It parses the given jar file for the mapping.xml file. If the file is wrong formatted or inconsistent it throws and exception in the sensitive mode or just ignores inconsistences in the mindless mode.</li>
+ * <li>It creates a hash map with the dictionary names as key and the list of words as value.</li>
+ * </ol>
+ */
+public class PluginManager {
+	private 
+}

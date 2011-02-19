@@ -1,0 +1,36 @@
+package at.chainlet.rse.plugin;
+
+/**
+ * This class is a modell class for the mapping.xml file. It contains the information
+ * about the dictionary mapping and the containing words.
+ */
+public class DictionaryMapping {
+	/**
+	 * Contains the word names which are in the given dictionary.
+	 */
+	private String[] words;
+	
+	/**
+	 * Defines wether the given dictionary name must allready exist (true) or
+	 * will be created if it does not exist allready.
+	 */
+	private Boolean mustHaveBasement;
+	
+	/**
+	 * Contains the name of the dictionary to which the words get added.
+	 */
+	private String name;
+	
+	/**
+	 * Sets the word name list.
+	 * @param names
+	 */
+	public void setWords(String[] names) {
+		words = names;
+	}
+
+	public String[] getWords() {
+		return words;
+	}
+	
+}

@@ -1,0 +1,13 @@
+package at.chainlet.rse.plugin;
+
+/**
+ * This is a model class which is used in a client code jar. The RSE interpreter
+ * is build upon the principle that the very basics must be enough for the interpreter
+ * and everything else - e.g. IFs or LOOPs - are build in client libraries which could
+ * be plugged in.
+ * @author zombie
+ *
+ */
+public class Mapping {
+
+}

@@ -1,0 +1,14 @@
+/**
+ * Simple CLI based test for the RSE interpreter.
+ */
+public class CliTester {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

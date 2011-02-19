@@ -31,4 +31,7 @@
 <fullyQualifiedTypeName name="at.chainlet.rse.core.stacktypes.BooleanParser"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.stacktypes.IntegerParser"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.stacktypes.DoubleParser"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.OutputDevice"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.RudimentaryStackVM_Test"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.RudimentaryStackVM"/>
 </qualifiedTypeNameHistroy>

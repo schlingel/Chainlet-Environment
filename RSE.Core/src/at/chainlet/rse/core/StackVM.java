@@ -47,4 +47,15 @@ public interface StackVM extends WordStatusObserver {
 	 */
 	public abstract void pollNextTerm();
 
+	/**
+	 * Adds the given device to the output chaine. Every device in this chain prints
+	 * the output from the executed words to the the given device. (E.g. console line)
+	 */
+	public abstract void addOutputDevice(OutputDevice device);
+	
+	/**
+	 * Returns the list of the output devices.
+	 * @return
+	 */
+	public abstract OutputDevice[] getOutputDevices();
 }

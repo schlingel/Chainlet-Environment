@@ -1,0 +1,10 @@
+package at.chainlet.rse.plugin;
+
+/**
+ * 
+ * @author zombie
+ *
+ */
+public class PluginCreator {
+
+}

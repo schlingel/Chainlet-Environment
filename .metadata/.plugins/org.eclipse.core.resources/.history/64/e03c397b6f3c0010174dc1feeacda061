@@ -1,0 +1,8 @@
+package at.chainlet.rse.plugin;
+
+/**
+ * <p>This class handles the instancing and loading of </p>
+ */
+public class PluginCreator {
+
+}

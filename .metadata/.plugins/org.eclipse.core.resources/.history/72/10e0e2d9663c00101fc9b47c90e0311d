@@ -1,0 +1,66 @@
+package at.chainlet.rse.core;
+
+import static org.hamcrest.core.Is.is;
+
+import org.junit.Test;
+
+import at.chainlet.rse.RudimentaryStackVM;
+import at.chainlet.rse.core.exceptions.RSEInvalidStateException;
+import static org.junit.Assert.*;
+
+/**
+ * Testclass for the rudimentary stack environment VM.
+ */
+public class RudimentaryStackVM_Test extends RSECoreTest {
+	@Test
+	public void pollNextTerm_ShouldExecuteTermAsWordWhenItsInTheLibrary() throws RSEInvalidStateException {
+		Dictionary d = getMockDict("test1");
+		MockWord w = (MockWord)getMockWord("test");
+		d.add(w);
+		StackVM vm = createDefaultVm(d);
+		vm.interpret("test");
+		assertThat(w.getExecutionCounter(), is(1));
+	}
+	
+	/**
+	 * Creates a new stack VM with the given words in the given library.
+	 */
+	private StackVM createDefaultVm(Dictionary dic) {
+		StackVM vm = new RudimentaryStackVM();
+		if(dic != null)
+			vm.getLibrary().add(dic);
+
+		return vm;
+	}
+	
+	@Test
+	public void parse_ShouldCreateATermQueueFromTheGivenInput() throws RSEInvalidStateException {
+		Dictionary dic = getMockDict("test");
+		StackVM vm = createDefaultVm(dic);
+		
+		vm.parse(getMockScriptWithGivenChars(20));
+		assertNotNull(vm.getTermQueue());
+		assertThat(vm.getTermQueue().size(), is(20));
+	}
+	
+	private String getMockScriptWithGivenChars(int number) {
+		if(number < 0)
+			number = 0;
+		
+		StringBuffer sb = new StringBuffer();
+		for(int i = 0; i < number; i++) {
+			sb.append("term" + i);
+			sb.append(" ");
+		}
+		
+		return sb.toString();
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void addOutputDevice_shouldThrowIllegalArgumentExceptionOnNull() {
+		RudimentaryStackVM vm = new RudimentaryStackVM();
+		vm.addOutputDevice(null);
+	}
+	
+	public void getOutputDevices_shouldReturnEmptyyArra
+}

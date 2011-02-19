@@ -55,4 +55,17 @@ public class RudimentaryStackVM_Test extends RSECoreTest {
 		
 		return sb.toString();
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void addOutputDevice_shouldThrowIllegalArgumentExceptionOnNull() {
+		StackVM vm = new RudimentaryStackVM();
+		vm.addOutputDevice(null);
+	}
+	
+	@Test
+	public void getOutputDevices_shouldReturnEmptyyArray() {
+		RudimentaryStackVM vm = new RudimentaryStackVM();
+		assertThat(vm.getOutputDevices().length, is(0));
+		assertThat(vm.getOutputDevices(), is(new OutputDevice[0]));
+	}
 }

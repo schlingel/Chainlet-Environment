@@ -1,0 +1,192 @@
+package at.chainlet.rse;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+import at.chainlet.rse.core.*;
+import at.chainlet.rse.core.stacktypes.*;
+import at.chainlet.rse.utils.StringSplitter;
+
+/**
+ * This is the core of the RSE system. It contains the logic for managing and starting
+ * words and contains the shared stacks.
+ */
+public class RudimentaryStackVM implements StackVM {
+	/**
+	 * Contains dictionaries in the configured order. 
+	 */
+	private Library library;
+	
+	/**
+	 * Contains the return stack.
+	 */
+	private Stack<Object> returnStack;
+	
+	/**
+	 * Contains the data stack.
+	 */
+	private Stack<Object> dataStack;
+	
+	/**
+	 * Contains the term queue. The term queue contains the splitted parts of the input
+	 * string which gets step by step meaning by the interpret method.
+	 */
+	private ConcurrentLinkedQueue<String> termQueue;
+	
+	/**
+	 * Contains the value parsers.
+	 */
+	private ArrayList<ValueParser> valueParsers;
+	
+	/**
+	 * Contains the list of the output devices. Every device gets the output string when
+	 * a word prints to the output.
+	 */
+	private ArrayList<OutputDevice> outputDevices;
+	
+	private StringSplitter termSplitter;
+	
+	/**
+	 * Initializes the VM.
+	 */
+	public RudimentaryStackVM() {
+		initializeDataStructures();
+		initializeDefaultValueParsers();
+		termSplitter = new StringSplitter(' ');
+	}
+	
+	/* (non-Javadoc)
+	 * @see at.chainlet.rse.core.StackVM#getTermQueue()
+	 */
+	@Override
+	public ConcurrentLinkedQueue<String> getTermQueue() { return termQueue; }
+	
+	/* (non-Javadoc)
+	 * @see at.chainlet.rse.core.StackVM#getLibrary()
+	 */
+	@Override
+	public Library getLibrary() { return library; }
+	
+	/* (non-Javadoc)
+	 * @see at.chainlet.rse.core.StackVM#getReturnStack()
+	 */
+	@Override
+	public Stack<Object> getReturnStack() { return returnStack; }
+	
+	/* (non-Javadoc)
+	 * @see at.chainlet.rse.core.StackVM#getDataStack()
+	 */
+	@Override
+	public Stack<Object> getDataStack() { return dataStack; }
+	
+	/**
+	 * Initializes the data structures in the VM.
+	 */
+	private void initializeDataStructures() {
+		returnStack = new Stack<Object>();
+		dataStack = new Stack<Object>();
+		termQueue = new ConcurrentLinkedQueue<String>();
+		library = new Library();
+		valueParsers = new ArrayList<ValueParser>();
+	}
+	
+	private void initializeDefaultValueParsers() {
+		valueParsers.add(new BooleanParser());
+		valueParsers.add(new IntegerParser());
+		valueParsers.add(new DoubleParser());
+	}
+
+	/* (non-Javadoc)
+	 * @see at.chainlet.rse.core.StackVM#wordFinished(at.chainlet.rse.core.Word)
+	 */
+	@Override
+	public void wordFinished(Word w) {
+		pollNextTerm();
+	}
+	
+	/* (non-Javadoc)
+	 * @see at.chainlet.rse.core.StackVM#interpret(java.lang.String)
+	 */
+	@Override
+	public void interpret(String input) {
+		if(input == null)
+			input = "";
+		
+		parse(input);
+		pollNextTerm();
+	}
+	
+	/* (non-Javadoc)
+	 * @see at.chainlet.rse.core.StackVM#parse(java.lang.String)
+	 */
+	@Override
+	public void parse(String input) {
+		String terms[] = termSplitter.split(input);
+		
+		for(String term : terms) {
+			termQueue.add(term);
+		}
+	}
+	
+	/**
+	 * @see at.chainlet.rse.core.StackVM#pollNextTerm()
+	 */
+	@Override
+	public void pollNextTerm() {
+		if(!termQueue.isEmpty()) {
+			String term = termQueue.poll();
+			
+			if(library.wordExists(term)) { 
+				// When the word finishs it calls wordFinished and this starts
+				// pollNextTerm automatically
+				runWord(library.getWord(term));
+			}
+			else { 
+				parseValueAndPutItOnStack(term);
+				pollNextTerm(); 
+			}
+		}
+	}
+	
+	/**
+	 * Executes the given word in the environment of this VM.
+	 */
+	private void runWord(Word w) {
+		w.registerVM(this);
+		w.execute();
+	}
+	
+	/**
+	 * Checks the converters and tries to generate an data type out of the literal. If there's
+	 * no converter for the given literal it is put as String on the stack.
+	 */
+	private void parseValueAndPutItOnStack(String name) {
+		for(ValueParser parser : valueParsers) {
+			if(parser.isParsable(name)) {
+				dataStack.add(parser.convert(name));
+				return;
+			}
+		}
+		
+		dataStack.add(name);
+	}
+	
+	@Override
+	public void addOutputDevice(OutputDevice device) {
+		if(device == null)
+			throw new IllegalArgumentException("Output devices must not be null!");
+		
+		outputDevices.add(device);
+	}
+	
+	/**
+	 * 
+	 */
+	@Override
+	public OutputDevice[] getOutputDevices() {
+		if(outputDevices == null)
+			return new OutputDevice[0];
+		
+		return outputDevices.toArray(new OutputDevice[0]);
+	}
+}

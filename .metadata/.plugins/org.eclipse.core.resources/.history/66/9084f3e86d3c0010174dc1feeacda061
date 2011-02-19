@@ -1,0 +1,9 @@
+package at.chainlet.rse.plugin;
+
+/**
+ * This class is a modell class for the mapping.xml file. It contains the information
+ * about the dictionary mapping and the containing words.
+ */
+public class DictionaryMapping {
+	private String[] classNames;
+}

@@ -1,0 +1,11 @@
+package at.chainlet.rse.plugin;
+
+/**
+ * This class is a modell class for the mapping.xml file. It contains the information
+ * about the dictionary mapping and 
+ * @author zombie
+ *
+ */
+public class DictionaryMapping {
+
+}

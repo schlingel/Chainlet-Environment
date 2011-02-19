@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;CliTester.java&apos; to &apos;RSE.SimpleTester/src/at.chainlet.rse.integration.test&apos;&#x0D;&#x0A;- Original project: &apos;RSE.SimpleTester&apos;&#x0D;&#x0A;- Destination element: &apos;RSE.SimpleTester/src/at.chainlet.rse.integration.test&apos;&#x0D;&#x0A;- Original element: &apos;CliTester.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;at.chainlet.rse.integration.test" element1="/src&lt;{CliTester.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1298110423086" units="1" version="1.0"/>
+</session>
