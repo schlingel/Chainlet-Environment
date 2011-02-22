@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="Rerun at.chainlet.rse.core.Dictionary_Tests" project="RSE" tests="13" started="13" failures="0" errors="0" ignored="0">
+  <testsuite name="at.chainlet.rse.core.Dictionary_Tests" time="0.016">
+    <testcase name="addNullWordShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="addNamelesWordShouldThrowRSEInvalidStateException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.001"/>
+    <testcase name="containsShouldReturnTrueIfWordExists" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.001"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist1" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldReturnFalseIfWordDoesntExist2" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="containsShouldThrowIllegalArgumentException" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.001"/>
+    <testcase name="containsShouldThrowRSEInvalidStateExceptionOnEmptyName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="getShouldReturnNullOnUnknownName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="getShouldReturnTheWordWithTheGivenName" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="getShouldReturnTheLatestWord" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.012"/>
+    <testcase name="setOlderVersionOfTwiceShouldReturnTheThirdLatestVersion" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="setOlderVersionShouldReturnFalseIfThereNotThatManyOldVersions" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.0"/>
+    <testcase name="setOlderVersionShouldReturnTrueIfItWorked" classname="at.chainlet.rse.core.Dictionary_Tests" time="0.001"/>
+  </testsuite>
+</testrun>

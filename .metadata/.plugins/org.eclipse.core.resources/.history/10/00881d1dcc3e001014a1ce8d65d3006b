@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RSE" description="Buildfile for the RSE project">
+	<target name="clean">
+		<delete dir="" />
+	</target>
+</project>

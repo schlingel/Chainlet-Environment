@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RSE">
+	<property name="rse-core-classes" value="./../RSE.Core/bin/" /> 
+	<property name="extern-binaries" value="./lib/" />
+	<property name="core-test-dir" value="./test/at/chaintlet/rse/core/" />
+	
+	<target name="init">
+		<mkdir dir="./bin/" />
+	</target>
+
+	<target name="clean">
+		<delete dir="./bin/" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="./src/" destdir="./bin/" includeAntRuntime="false">
+	      <classpath>
+	        <pathelement location="${rse-core-classes}" />
+			<fileset dir="${extern-binaries}">
+				<include name="*.jar" />
+			</fileset>
+	        <pathelement path="${java.class.path}/" />
+	      </classpath>
+		</javac>
+	</target>
+	
+	<target name="all-tests" depends="compile">
+		<junit printsummary="yes" fork="yes" haltonfailure="yes">
+		  <formatter type="plain"/>
+		  	<test name="my.test.TestCase"/>
+		</junit>		
+		<batchtest fork="yes">
+                <fileset dir="${core-test-dir}" includes="**/*.java"/>
+        </batchtest>
+	</target>	
+</project>

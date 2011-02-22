@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RSE">
+	<property name="rse-core-classes" value="./../RSE.Core/bin/" /> 
+	<property name="extern-binaries" value="./lib/" />
+	
+	<target name="init">
+		<mkdir dir="./bin/" />
+	</target>
+
+	<target name="clean">
+		<delete dir="./bin/" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="./src/" destdir="./bin/" includeAntRuntime="false">
+	      <classpath>
+	        <pathelement location="${rse-core-classes}" />
+			<fileset dir="${extern-binaries}">
+				<include name="*.jar" />
+			</fileset>
+	        <pathelement path="${java.class.path}/" />
+	      </classpath>
+		</javac>
+	</target>
+	
+	<target name=""	
+</project>

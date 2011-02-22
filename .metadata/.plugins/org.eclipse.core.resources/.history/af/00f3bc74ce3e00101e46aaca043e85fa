@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RSE">
+	<property name="rse-core-classes" value="./../RSE.Core/bin/" /> 
+	<target name="init">
+		<mkdir dir="./bin/" />
+	</target>
+
+	<target name="clean">
+		<delete dir="./bin/" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="./src/" destdir="./bin/">
+      <classpath>
+        <pathelement location="lib/"/>
+        <pathelement path="${java.class.path}/"/>
+        <pathelement path="${additional.path}"/>
+      </classpath>
+		</javac>
+	</target>	
+</project>

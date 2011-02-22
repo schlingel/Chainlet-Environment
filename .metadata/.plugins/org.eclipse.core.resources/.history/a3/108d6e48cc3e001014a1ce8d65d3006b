@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RSE">
+	<target name="init">
+		<mkdir dir="./bin/" />
+	</target>
+
+	<target name="clean">
+		<delete dir="./bin/" />
+	</target>
+
+		
+</project>

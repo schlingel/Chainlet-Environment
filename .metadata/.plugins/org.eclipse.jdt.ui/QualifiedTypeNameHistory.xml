@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
@@ -8,7 +7,6 @@
 <fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidStateException"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.exceptions.RSEInvalidActionException"/>
-<fullyQualifiedTypeName name="at.chainlet.rse.core.Word"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.HistorizedWordList"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.JournalingWordList"/>
@@ -17,14 +15,12 @@
 <fullyQualifiedTypeName name="at.chainlet.rse.core.WordStatusObserver"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.MockWordStatusObserver"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Library"/>
-<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.RSECoreTest"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.Dictionary"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentLinkedQueue"/>
 <fullyQualifiedTypeName name="org.hamcrest.core.IsNot"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.ValueParser"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.RudimentaryStackVM"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.utils.StringSplitter"/>
@@ -34,4 +30,18 @@
 <fullyQualifiedTypeName name="at.chainlet.rse.core.OutputDevice"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.core.RudimentaryStackVM_Test"/>
 <fullyQualifiedTypeName name="at.chainlet.rse.RudimentaryStackVM"/>
+<fullyQualifiedTypeName name="java.net.JarURLConnection"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.jar.JarFile"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="com.thoughtworks.xstream.XStream"/>
+<fullyQualifiedTypeName name="java.util.ServiceLoader"/>
+<fullyQualifiedTypeName name="at.chainlet.rse.core.Word"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.lang.ClassLoader"/>
+<fullyQualifiedTypeName name="java.net.URLClassLoader"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
